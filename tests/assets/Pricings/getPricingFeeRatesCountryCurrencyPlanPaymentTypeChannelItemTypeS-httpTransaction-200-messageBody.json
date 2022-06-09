@@ -1,0 +1,40 @@
+{
+    "pagination": {
+        "object_count": 1,
+        "page_number": 1,
+        "page_size": 1,
+        "page_count": 1,
+        "continuation": "dGhpcyBpcyBhIGNvbnRpbnVhdGlvbiB0b2tlbg",
+        "has_more_items": false
+    },
+    "fee_rates": [
+        {
+            "fixed": {
+                "currency": "USD",
+                "value": 432,
+                "major_value": "4.32",
+                "display": "4.32 USD"
+            },
+            "maximum": {
+                "currency": "USD",
+                "value": 432,
+                "major_value": "4.32",
+                "display": "4.32 USD"
+            },
+            "minimum": {
+                "currency": "USD",
+                "value": 432,
+                "major_value": "4.32",
+                "display": "4.32 USD"
+            },
+            "country": "US",
+            "currency": "USD",
+            "fee_name: payment_fee": "payment_fee",
+            "plan": "package1",
+            "payment_type": "any",
+            "channel": "any",
+            "item_type": "any",
+            "percent": "2.50"
+        }
+    ]
+}

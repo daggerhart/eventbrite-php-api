@@ -1,0 +1,28 @@
+{
+    "$schema": "http:\/\/json-schema.org\/draft-07\/schema#",
+    "type": "object",
+    "properties": {
+        "locale": {
+            "type": "string"
+        },
+        "formats": {
+            "type": "array"
+        }
+    },
+    "meta": {
+        "folder": "Formats",
+        "filename": "getFormats",
+        "resourceName": "List",
+        "transition": "List Formats",
+        "transitionResponseTypes": {
+            "200": "\\Eventbrite\\Model\\ModelBase"
+        },
+        "transaction": "httpTransaction",
+        "messageType": "httpResponse",
+        "resourceGroupName": "Formats",
+        "resourceGroup": "\\Eventbrite\\Resource\\Formats",
+        "transactionMethodName": "getFormats",
+        "responseStatusCode": 200,
+        "responseType": "\\Eventbrite\\Model\\ModelBase"
+    }
+}

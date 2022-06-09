@@ -1,0 +1,46 @@
+{
+    "pagination": {
+        "object_count": 1,
+        "page_number": 1,
+        "page_size": 1,
+        "page_count": 1,
+        "continuation": "dGhpcyBpcyBhIGNvbnRpbnVhdGlvbiB0b2tlbg",
+        "has_more_items": false
+    },
+    "questions": [
+        {
+            "resource_uri": "https:\/\/www.eventbriteapi.com\/v3\/events\/12345\/questions\/123456789\/",
+            "id": "123456789",
+            "question": {
+                "text": "Custom Question Title",
+                "html": "Question Title"
+            },
+            "required": true,
+            "display_answer_on_order": true,
+            "type": "checkbox",
+            "respondent": "ticket_buyer",
+            "choices": [
+                {
+                    "answer": {
+                        "text": "Choice 1",
+                        "html": "Choice 1"
+                    },
+                    "quantity_available": 250,
+                    "quantity_sold": 5,
+                    "low_stock": 250,
+                    "id": "123456",
+                    "subquestion_ids": []
+                }
+            ],
+            "ticket_classes": [
+                {
+                    "id": "1234",
+                    "name": "Ticket class name"
+                }
+            ],
+            "parent_id": "24038723",
+            "parent_choice_id": "66915463",
+            "sorting": 5
+        }
+    ]
+}

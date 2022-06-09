@@ -1,0 +1,94 @@
+{
+    "$schema": "http:\/\/json-schema.org\/draft-07\/schema#",
+    "type": "object",
+    "properties": {
+        "inventory_tier": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "tier": {
+                    "type": "number"
+                },
+                "seatmap_number": {
+                    "enum": [
+                        0,
+                        1
+                    ]
+                },
+                "sort_order": {
+                    "type": "number"
+                },
+                "color": {
+                    "type": "string"
+                },
+                "quantity_total": {
+                    "type": "number"
+                },
+                "count_against_event_capacity": {
+                    "type": "boolean"
+                },
+                "image_id": {
+                    "anyOf": [
+                        {
+                            "type": "null"
+                        },
+                        {
+                            "type": "string"
+                        }
+                    ]
+                },
+                "id": {
+                    "type": "string"
+                },
+                "event_id": {
+                    "type": "string"
+                },
+                "quantity_held": {
+                    "type": "number"
+                },
+                "quantity_sold": {
+                    "type": "number"
+                },
+                "quantity_pending": {
+                    "type": "number"
+                },
+                "ticket_class_ids": {
+                    "type": "array"
+                },
+                "capacity_total": {
+                    "type": "number"
+                },
+                "holds": {
+                    "anyOf": [
+                        {
+                            "type": "null"
+                        },
+                        {
+                            "type": "array"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "meta": {
+        "folder": "InventoryTiers",
+        "filename": "getEventsInventoryTier",
+        "resourceName": "Retrieve",
+        "transition": "Retrieve an Inventory Tier",
+        "transitionResponseTypes": {
+            "200": "\\Eventbrite\\Model\\ModelBase",
+            "403": "\\Eventbrite\\Model\\DataType\\Error",
+            "404": "\\Eventbrite\\Model\\DataType\\Error"
+        },
+        "transaction": "httpTransaction",
+        "messageType": "httpResponse",
+        "resourceGroupName": "InventoryTiers",
+        "resourceGroup": "\\Eventbrite\\Resource\\InventoryTiers",
+        "transactionMethodName": "getEventsInventoryTier",
+        "responseStatusCode": 200,
+        "responseType": "\\Eventbrite\\Model\\ModelBase"
+    }
+}

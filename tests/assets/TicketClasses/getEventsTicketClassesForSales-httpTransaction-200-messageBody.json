@@ -1,0 +1,141 @@
+{
+    "pagination": {
+        "object_count": 1,
+        "page_number": 1,
+        "page_size": 1,
+        "page_count": 1,
+        "continuation": "dGhpcyBpcyBhIGNvbnRpbnVhdGlvbiB0b2tlbg",
+        "has_more_items": false
+    },
+    "ticket_classes": [
+        {
+            "description": "General Admission",
+            "donation": false,
+            "free": false,
+            "minimum_quantity": 1,
+            "maximum_quantity": 10,
+            "delivery_methods": [
+                "electronic",
+                "will_call",
+                "standard_shipping",
+                "third_party_shipping"
+            ],
+            "cost": {
+                "actual_cost": {
+                    "currency": "USD",
+                    "value": 432,
+                    "major_value": "4.32",
+                    "display": "4.32 USD"
+                },
+                "actual_fee": {
+                    "currency": "USD",
+                    "value": 432,
+                    "major_value": "4.32",
+                    "display": "4.32 USD"
+                },
+                "cost": {
+                    "currency": "USD",
+                    "value": 432,
+                    "major_value": "4.32",
+                    "display": "4.32 USD"
+                },
+                "fee": {
+                    "currency": "USD",
+                    "value": 432,
+                    "major_value": "4.32",
+                    "display": "4.32 USD"
+                },
+                "tax": {
+                    "currency": "USD",
+                    "value": 432,
+                    "major_value": "4.32",
+                    "display": "4.32 USD"
+                }
+            },
+            "resource_uri": "https:\/\/www.eventbriteapi.com\/v3\/events\/1234\/ticket_classes\/12345\/",
+            "image_id": "1234",
+            "name": "Gold GA",
+            "sales_start": null,
+            "sales_end": null,
+            "include_fee": false,
+            "on_sale_status": "UNKNOWN",
+            "variant_input_type": "one",
+            "variants": [
+                {
+                    "id": "T12345",
+                    "category": "admission",
+                    "primary": true,
+                    "code": null,
+                    "name": "Admission",
+                    "display_name": "Orchestra Admission",
+                    "description": "Full price admission ticket",
+                    "free": false,
+                    "cost": {
+                        "currency": "USD",
+                        "value": 432,
+                        "major_value": "4.32",
+                        "display": "4.32 USD"
+                    },
+                    "total_cost": {
+                        "currency": "USD",
+                        "value": 432,
+                        "major_value": "4.32",
+                        "display": "4.32 USD"
+                    },
+                    "fee": {
+                        "currency": "USD",
+                        "value": 432,
+                        "major_value": "4.32",
+                        "display": "4.32 USD"
+                    },
+                    "tax": {
+                        "currency": "USD",
+                        "value": 432,
+                        "major_value": "4.32",
+                        "display": "4.32 USD"
+                    },
+                    "tax_and_fee": {
+                        "currency": "USD",
+                        "value": 432,
+                        "major_value": "4.32",
+                        "display": "4.32 USD"
+                    },
+                    "original_cost": {
+                        "currency": "USD",
+                        "value": 432,
+                        "major_value": "4.32",
+                        "display": "4.32 USD"
+                    },
+                    "original_total_cost": {
+                        "currency": "USD",
+                        "value": 432,
+                        "major_value": "4.32",
+                        "display": "4.32 USD"
+                    },
+                    "original_fee": {
+                        "currency": "USD",
+                        "value": 432,
+                        "major_value": "4.32",
+                        "display": "4.32 USD"
+                    },
+                    "original_tax": {
+                        "currency": "USD",
+                        "value": 432,
+                        "major_value": "4.32",
+                        "display": "4.32 USD"
+                    },
+                    "on_sale_status": "UNKNOWN",
+                    "amount_off": {
+                        "currency": "USD",
+                        "value": 432,
+                        "major_value": "4.32",
+                        "display": "4.32 USD"
+                    },
+                    "percent_off": "25.0",
+                    "color": "#fac114",
+                    "image_id": "1234"
+                }
+            ]
+        }
+    ]
+}

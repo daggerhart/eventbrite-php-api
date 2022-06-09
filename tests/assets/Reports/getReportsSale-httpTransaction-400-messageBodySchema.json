@@ -1,0 +1,47 @@
+{
+    "$schema": "http:\/\/json-schema.org\/draft-07\/schema#",
+    "type": "object",
+    "properties": {
+        "error_description": {
+            "type": "string"
+        },
+        "error_detail": {
+            "type": "object"
+        },
+        "status_code": {
+            "type": "number"
+        },
+        "error": {
+            "anyOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "enum": [
+                        "ARGUMENTS_ERROR",
+                        "CURRENCY_MISMATCH",
+                        "INVALID",
+                        "INVALID_PARAMETER"
+                    ]
+                }
+            ]
+        }
+    },
+    "meta": {
+        "folder": "Reports",
+        "filename": "getReportsSale",
+        "resourceName": "Retrieve a Sales Report",
+        "transition": "Retrieve a Sales Report",
+        "transitionResponseTypes": {
+            "200": "\\Eventbrite\\Model\\DataType\\ReportResponseSales",
+            "400": "\\Eventbrite\\Model\\DataType\\Error"
+        },
+        "transaction": "httpTransaction",
+        "messageType": "httpResponse",
+        "resourceGroupName": "Reports",
+        "resourceGroup": "\\Eventbrite\\Resource\\Reports",
+        "transactionMethodName": "getReportsSale",
+        "responseStatusCode": 400,
+        "responseType": "\\Eventbrite\\Model\\DataType\\Error"
+    }
+}

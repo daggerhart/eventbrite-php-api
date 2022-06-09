@@ -1,0 +1,35 @@
+{
+    "$schema": "http:\/\/json-schema.org\/draft-07\/schema#",
+    "type": "object",
+    "properties": {
+        "error_description": {
+            "type": "string"
+        },
+        "error_detail": {
+            "type": "object"
+        },
+        "status_code": {
+            "type": "number"
+        },
+        "error": {
+            "const": "NOT_AUTHORIZED"
+        }
+    },
+    "meta": {
+        "folder": "SeatMaps",
+        "filename": "createEventsSeatmaps",
+        "resourceName": "Create Seat Map For Event",
+        "transition": "Create Seat Map For Event",
+        "transitionResponseTypes": {
+            "200": "\\Eventbrite\\Model\\DataType\\SeatMap",
+            "403": "\\Eventbrite\\Model\\DataType\\Error"
+        },
+        "transaction": "httpTransaction",
+        "messageType": "httpResponse",
+        "resourceGroupName": "SeatMaps",
+        "resourceGroup": "\\Eventbrite\\Resource\\SeatMaps",
+        "transactionMethodName": "createEventsSeatmaps",
+        "responseStatusCode": 403,
+        "responseType": "\\Eventbrite\\Model\\DataType\\Error"
+    }
+}

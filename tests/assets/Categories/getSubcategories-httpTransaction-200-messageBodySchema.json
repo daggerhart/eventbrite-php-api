@@ -1,0 +1,91 @@
+{
+    "$schema": "http:\/\/json-schema.org\/draft-07\/schema#",
+    "type": "object",
+    "properties": {
+        "locale": {
+            "type": "string"
+        },
+        "pagination": {
+            "type": "object",
+            "properties": {
+                "object_count": {
+                    "type": "number"
+                },
+                "page_number": {
+                    "type": "number"
+                },
+                "page_size": {
+                    "type": "number"
+                },
+                "page_count": {
+                    "type": "number"
+                },
+                "continuation": {
+                    "type": "string"
+                },
+                "has_more_items": {
+                    "type": "boolean"
+                }
+            }
+        },
+        "subcategories": {
+            "type": "array"
+        },
+        "subcategory": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "string"
+                },
+                "resource_uri": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "parent_category": {
+                    "type": "object",
+                    "properties": {
+                        "id": {
+                            "type": "string"
+                        },
+                        "resource_uri": {
+                            "type": "string"
+                        },
+                        "name": {
+                            "type": "string"
+                        },
+                        "name_localized": {
+                            "type": "string"
+                        },
+                        "short_name": {
+                            "type": "string"
+                        },
+                        "short_name_localized": {
+                            "type": "string"
+                        },
+                        "subcategories": {
+                            "type": "array"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "meta": {
+        "folder": "Categories",
+        "filename": "getSubcategories",
+        "resourceName": "List",
+        "transition": "List of Subcategories",
+        "transitionResponseTypes": {
+            "200": "\\Eventbrite\\Model\\Collection\\Subcategory"
+        },
+        "transaction": "httpTransaction",
+        "messageType": "httpResponse",
+        "resourceGroupName": "Categories",
+        "resourceGroup": "\\Eventbrite\\Resource\\Categories",
+        "transactionMethodName": "getSubcategories",
+        "responseStatusCode": 200,
+        "responseType": "\\Eventbrite\\Model\\Collection\\Subcategory"
+    }
+}

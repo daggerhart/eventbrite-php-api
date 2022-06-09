@@ -1,0 +1,27 @@
+{
+    "$schema": "http:\/\/json-schema.org\/draft-07\/schema#",
+    "type": "object",
+    "properties": {
+        "deleted": {
+            "type": "boolean"
+        }
+    },
+    "meta": {
+        "folder": "Questions",
+        "filename": "deleteEventsQuestion",
+        "resourceName": "Delete Custom Question",
+        "transition": "Delete a Custom Question for an Event",
+        "transitionResponseTypes": {
+            "200": "\\Eventbrite\\Model\\ModelBase",
+            "404": "\\Eventbrite\\Model\\ModelBase",
+            "403": "\\Eventbrite\\Model\\ModelBase"
+        },
+        "transaction": "httpTransaction",
+        "messageType": "httpResponse",
+        "resourceGroupName": "Questions",
+        "resourceGroup": "\\Eventbrite\\Resource\\Questions",
+        "transactionMethodName": "deleteEventsQuestion",
+        "responseStatusCode": 200,
+        "responseType": "\\Eventbrite\\Model\\ModelBase"
+    }
+}

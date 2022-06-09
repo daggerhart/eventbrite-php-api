@@ -1,0 +1,43 @@
+{
+    "$schema": "http:\/\/json-schema.org\/draft-07\/schema#",
+    "type": "object",
+    "properties": {
+        "error_description": {
+            "type": "string"
+        },
+        "error_detail": {
+            "type": "object"
+        },
+        "status_code": {
+            "type": "number"
+        },
+        "error": {
+            "anyOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "const": "INSUFFICIENT_PACKAGE"
+                }
+            ]
+        }
+    },
+    "meta": {
+        "folder": "Questions",
+        "filename": "postEventQuestions",
+        "resourceName": "Create Custom Question",
+        "transition": "Create a Custom question for an Event",
+        "transitionResponseTypes": {
+            "200": "\\Eventbrite\\Model\\DataType\\BaseQuestion",
+            "400": "\\Eventbrite\\Model\\DataType\\Error",
+            "403": "\\Eventbrite\\Model\\ModelBase"
+        },
+        "transaction": "httpTransaction",
+        "messageType": "httpResponse",
+        "resourceGroupName": "Questions",
+        "resourceGroup": "\\Eventbrite\\Resource\\Questions",
+        "transactionMethodName": "postEventQuestions",
+        "responseStatusCode": 400,
+        "responseType": "\\Eventbrite\\Model\\DataType\\Error"
+    }
+}

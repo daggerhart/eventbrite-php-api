@@ -1,0 +1,22 @@
+{
+    "$schema": "http:\/\/json-schema.org\/draft-07\/schema#",
+    "type": "object",
+    "meta": {
+        "folder": "Webhooks",
+        "filename": "deleteWebhooks",
+        "resourceName": "Delete",
+        "transition": "Delete Webhook by ID",
+        "transitionResponseTypes": {
+            "200": "\\Eventbrite\\Model\\ModelBase",
+            "400": "\\Eventbrite\\Model\\DataType\\Error",
+            "403": "\\Eventbrite\\Model\\ModelBase"
+        },
+        "transaction": "httpTransaction",
+        "messageType": "httpResponse",
+        "resourceGroupName": "Webhooks",
+        "resourceGroup": "\\Eventbrite\\Resource\\Webhooks",
+        "transactionMethodName": "deleteWebhooks",
+        "responseStatusCode": 200,
+        "responseType": "\\Eventbrite\\Model\\ModelBase"
+    }
+}

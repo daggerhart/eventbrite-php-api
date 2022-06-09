@@ -1,0 +1,28 @@
+{
+    "$schema": "http:\/\/json-schema.org\/draft-07\/schema#",
+    "type": "object",
+    "properties": {
+        "deleted": {
+            "type": "string"
+        }
+    },
+    "meta": {
+        "folder": "InventoryTiers",
+        "filename": "deleteEventInventoryTier",
+        "resourceName": "Delete",
+        "transition": "Delete an Inventory Tier",
+        "transitionResponseTypes": {
+            "200": "\\Eventbrite\\Model\\ModelBase",
+            "400": "\\Eventbrite\\Model\\DataType\\Error",
+            "403": "\\Eventbrite\\Model\\DataType\\Error",
+            "404": "\\Eventbrite\\Model\\DataType\\Error"
+        },
+        "transaction": "httpTransaction",
+        "messageType": "httpResponse",
+        "resourceGroupName": "InventoryTiers",
+        "resourceGroup": "\\Eventbrite\\Resource\\InventoryTiers",
+        "transactionMethodName": "deleteEventInventoryTier",
+        "responseStatusCode": 200,
+        "responseType": "\\Eventbrite\\Model\\ModelBase"
+    }
+}

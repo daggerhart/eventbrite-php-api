@@ -1,0 +1,21 @@
+{
+    "id": "1",
+    "name": "Testing",
+    "creator": {
+        "id": "272057970621",
+        "name": "john@example.com",
+        "emails": [
+            {
+                "verified": false,
+                "primary": true,
+                "email": "john@example.com"
+            }
+        ]
+    },
+    "changed": "2018-10-22T21:43:16Z",
+    "created": "2018-10-22T21:43:16Z",
+    "attendee_count": 2,
+    "token": "",
+    "event_id": "12345",
+    "date_joined": ""
+}

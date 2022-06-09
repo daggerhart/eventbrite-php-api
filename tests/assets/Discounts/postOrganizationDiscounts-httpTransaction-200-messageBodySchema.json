@@ -1,0 +1,80 @@
+{
+    "$schema": "http:\/\/json-schema.org\/draft-07\/schema#",
+    "type": "object",
+    "properties": {
+        "type": {
+            "anyOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "enum": [
+                        "access",
+                        "coded",
+                        "hold",
+                        "public"
+                    ]
+                }
+            ]
+        },
+        "code": {
+            "type": "string"
+        },
+        "amount_off": {
+            "type": "string"
+        },
+        "percent_off": {
+            "type": "string"
+        },
+        "event_id": {
+            "type": "string"
+        },
+        "ticket_class_ids": {
+            "type": "array"
+        },
+        "quantity_available": {
+            "type": "number"
+        },
+        "start_date": {
+            "type": "string"
+        },
+        "start_date_relative": {
+            "type": "number"
+        },
+        "end_date": {
+            "type": "string"
+        },
+        "end_date_relative": {
+            "type": "number"
+        },
+        "ticket_group_id": {
+            "type": "string"
+        },
+        "hold_ids": {
+            "type": "array"
+        },
+        "id": {
+            "type": "string"
+        },
+        "quantity_sold": {
+            "type": "number"
+        }
+    },
+    "meta": {
+        "folder": "Discounts",
+        "filename": "postOrganizationDiscounts",
+        "resourceName": "Create",
+        "transition": "Create a Discount",
+        "transitionResponseTypes": {
+            "200": "\\Eventbrite\\Model\\DataType\\Discount",
+            "400": "\\Eventbrite\\Model\\DataType\\DiscountCreateError"
+        },
+        "transaction": "httpTransaction",
+        "messageType": "httpResponse",
+        "resourceGroupName": "Discounts",
+        "resourceGroup": "\\Eventbrite\\Resource\\Discounts",
+        "transactionMethodName": "postOrganizationDiscounts",
+        "responseStatusCode": 200,
+        "responseType": "\\Eventbrite\\Model\\DataType\\Discount"
+    }
+}

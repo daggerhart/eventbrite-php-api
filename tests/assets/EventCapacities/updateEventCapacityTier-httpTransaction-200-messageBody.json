@@ -1,0 +1,23 @@
+{
+    "event_id": "5678",
+    "quantity_pending": 2,
+    "quantity_sold": 10,
+    "quantity_total": 30,
+    "capacity_pending": 10,
+    "capacity_sold": 20,
+    "capacity_total": 100,
+    "capacity_is_custom": true,
+    "holds": [
+        {
+            "id": "I1234",
+            "event_id": "5678",
+            "name": "Marketing",
+            "abbreviation": "MKT",
+            "sort_order": 1,
+            "color": "#fac114",
+            "quantity_sold": 10,
+            "quantity_total": 30,
+            "quantity_pending": 5
+        }
+    ]
+}

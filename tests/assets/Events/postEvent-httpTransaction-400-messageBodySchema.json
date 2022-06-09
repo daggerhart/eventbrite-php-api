@@ -1,0 +1,73 @@
+{
+    "$schema": "http:\/\/json-schema.org\/draft-07\/schema#",
+    "type": "object",
+    "properties": {
+        "error_description": {
+            "type": "string"
+        },
+        "error_detail": {
+            "type": "object"
+        },
+        "status_code": {
+            "type": "number"
+        },
+        "error": {
+            "anyOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "enum": [
+                        "CANNOT_UPDATE_CURRENCY",
+                        "CANNOT_UPDATE_SOURCE",
+                        "DATE_CONFLICT",
+                        "DIFFERENT_TIMEZONES",
+                        "INVALID_DATE",
+                        "INVENTORY_TYPE_CONFLICT",
+                        "INVITE_CONFLICT",
+                        "NO_DEFAULT_ORGANIZER",
+                        "NO_PAYMENT_OPTIONS",
+                        "NO_PACKAGE_SELECTED",
+                        "NO_VENUE",
+                        "PASSWORD_CONFLICT",
+                        "PAYMENT_OPTIONS_DEPRECATED_SPLIT_FEES",
+                        "PAYMENT_OPTIONS_NO_COUNTRY",
+                        "PAYMENT_OPTIONS_NO_PAYMENT_TYPE",
+                        "PAYMENT_OPTIONS_PAYPAL_NO_EMAIL",
+                        "SHARE_INVITE_CONFLICT",
+                        "UNSUPPORTED_TIMEZONE",
+                        "VENUE_AND_ONLINE",
+                        "SUMMARY_DESCRIPTION_CONFLICT",
+                        "OCCURRENCE_TIMEZONE_UPDATE_NOT_ALLOWED",
+                        "SERIES_PARENT_START_END_DATE_EDIT",
+                        "OCCURRENCE_DURATION_TOO_LONG",
+                        "IS_RESERVED_SEATING_UPDATE_NOT_ALLOWED_ON_SERIES_EVENTS",
+                        "IS_SERIES_UPDATE_NOT_ALLOWED_ON_RESERVED_EVENTS",
+                        "IS_SERIES_UPDATE_NOT_ALLOWED_ON_TICKETED_EVENTS",
+                        "IS_SERIES_UPDATE_NOT_ALLOWED_ON_PUBLISHED_EVENTS",
+                        "IS_SERIES_UPDATE_NOT_ALLOWED_HAS_OCCURRENCES",
+                        "IS_SERIES_UPDATE_NOT_ALLOWED_ON_SERIES_OCCURRENCE",
+                        "ARGUMENTS_ERROR"
+                    ]
+                }
+            ]
+        }
+    },
+    "meta": {
+        "folder": "Events",
+        "filename": "postEvent",
+        "resourceName": "Update",
+        "transition": "Update an Event",
+        "transitionResponseTypes": {
+            "200": "\\Eventbrite\\Model\\DataType\\Event",
+            "400": "\\Eventbrite\\Model\\DataType\\Error"
+        },
+        "transaction": "httpTransaction",
+        "messageType": "httpResponse",
+        "resourceGroupName": "Events",
+        "resourceGroup": "\\Eventbrite\\Resource\\Events",
+        "transactionMethodName": "postEvent",
+        "responseStatusCode": 400,
+        "responseType": "\\Eventbrite\\Model\\DataType\\Error"
+    }
+}

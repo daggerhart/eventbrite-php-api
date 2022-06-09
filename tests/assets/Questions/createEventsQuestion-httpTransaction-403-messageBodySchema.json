@@ -1,0 +1,33 @@
+{
+    "$schema": "http:\/\/json-schema.org\/draft-07\/schema#",
+    "type": "object",
+    "properties": {
+        "status_code": {
+            "type": "number"
+        },
+        "error_description": {
+            "type": "string"
+        },
+        "error": {
+            "type": "string"
+        }
+    },
+    "meta": {
+        "folder": "Questions",
+        "filename": "createEventsQuestion",
+        "resourceName": "Create Custom Question",
+        "transition": "Create a Custom question for an Event",
+        "transitionResponseTypes": {
+            "200": "\\Eventbrite\\Model\\DataType\\BaseQuestion",
+            "400": "\\Eventbrite\\Model\\DataType\\Error",
+            "403": "\\Eventbrite\\Model\\ModelBase"
+        },
+        "transaction": "httpTransaction",
+        "messageType": "httpResponse",
+        "resourceGroupName": "Questions",
+        "resourceGroup": "\\Eventbrite\\Resource\\Questions",
+        "transactionMethodName": "createEventsQuestion",
+        "responseStatusCode": 403,
+        "responseType": "\\Eventbrite\\Model\\ModelBase"
+    }
+}

@@ -1,0 +1,55 @@
+{
+    "$schema": "http:\/\/json-schema.org\/draft-07\/schema#",
+    "type": "object",
+    "properties": {
+        "user": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "first_name": {
+                    "type": "string"
+                },
+                "last_name": {
+                    "type": "string"
+                },
+                "is_public": {
+                    "type": "boolean"
+                },
+                "image_id": {
+                    "anyOf": [
+                        {
+                            "type": "null"
+                        },
+                        {
+                            "type": "string"
+                        }
+                    ]
+                },
+                "emails": {
+                    "type": "array"
+                }
+            },
+            "required": [
+                "image_id"
+            ]
+        }
+    },
+    "meta": {
+        "folder": "Users",
+        "filename": "getUser",
+        "resourceName": "Retrieve Information about a User Account",
+        "transition": "Retrieve Information about a User Account",
+        "transitionResponseTypes": {
+            "200": "\\Eventbrite\\Model\\ModelBase"
+        },
+        "transaction": "httpTransaction",
+        "messageType": "httpResponse",
+        "resourceGroupName": "Users",
+        "resourceGroup": "\\Eventbrite\\Resource\\Users",
+        "transactionMethodName": "getUser",
+        "responseStatusCode": 200,
+        "responseType": "\\Eventbrite\\Model\\ModelBase"
+    }
+}

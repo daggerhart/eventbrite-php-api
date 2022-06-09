@@ -1,0 +1,45 @@
+{
+    "locale": "en_US",
+    "pagination": {
+        "object_count": 1,
+        "page_number": 1,
+        "page_size": 1,
+        "page_count": 1,
+        "continuation": "dGhpcyBpcyBhIGNvbnRpbnVhdGlvbiB0b2tlbg",
+        "has_more_items": false
+    },
+    "subcategories": [
+        {
+            "id": "3003",
+            "resource_uri": "https:\/\/www.eventbriteapi.com\/v3\/subcategories\/3003\/",
+            "name": "Classical",
+            "parent_category": {
+                "id": "103",
+                "resource_uri": "https:\/\/www.eventbriteapi.com\/v3\/categories\/103\/",
+                "name": "Music",
+                "name_localized": "Music",
+                "short_name": "Music",
+                "short_name_localized": "Music",
+                "subcategories": [
+                    []
+                ]
+            }
+        }
+    ],
+    "subcategory": {
+        "id": "3003",
+        "resource_uri": "https:\/\/www.eventbriteapi.com\/v3\/subcategories\/3003\/",
+        "name": "Classical",
+        "parent_category": {
+            "id": "103",
+            "resource_uri": "https:\/\/www.eventbriteapi.com\/v3\/categories\/103\/",
+            "name": "Music",
+            "name_localized": "Music",
+            "short_name": "Music",
+            "short_name_localized": "Music",
+            "subcategories": [
+                []
+            ]
+        }
+    }
+}

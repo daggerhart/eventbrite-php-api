@@ -1,0 +1,26 @@
+{
+    "$schema": "http:\/\/json-schema.org\/draft-07\/schema#",
+    "type": "object",
+    "properties": {
+        "description": {
+            "type": "string"
+        }
+    },
+    "meta": {
+        "folder": "EventDescriptions",
+        "filename": "getEventDescription",
+        "resourceName": "Retrieve",
+        "transition": "Retrieve Full HTML Description",
+        "transitionResponseTypes": {
+            "200": "\\Eventbrite\\Model\\ModelBase",
+            "400": "\\Eventbrite\\Model\\ModelBase"
+        },
+        "transaction": "httpTransaction",
+        "messageType": "httpResponse",
+        "resourceGroupName": "EventDescriptions",
+        "resourceGroup": "\\Eventbrite\\Resource\\EventDescriptions",
+        "transactionMethodName": "getEventDescription",
+        "responseStatusCode": 200,
+        "responseType": "\\Eventbrite\\Model\\ModelBase"
+    }
+}

@@ -1,0 +1,19 @@
+{
+    "name": "Great Venue",
+    "age_restriction": null,
+    "capacity": 100,
+    "address": {
+        "address_1": null,
+        "address_2": null,
+        "city": null,
+        "region": null,
+        "postal_code": null,
+        "country": null,
+        "latitude": null,
+        "longitude": null
+    },
+    "resource_uri": "https:\/\/www.eventbriteapi.com\/v3\/venues\/3003\/",
+    "id": "3003",
+    "latitude": "49.28497549999999",
+    "longitude": "123.11082529999999"
+}

@@ -1,0 +1,45 @@
+{
+    "$schema": "http:\/\/json-schema.org\/draft-07\/schema#",
+    "type": "object",
+    "properties": {
+        "error_description": {
+            "type": "string"
+        },
+        "error_detail": {
+            "type": "object"
+        },
+        "status_code": {
+            "type": "number"
+        },
+        "error": {
+            "anyOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "enum": [
+                        "NOT_PUBLISHED",
+                        "CANNOT_UNPUBLISH"
+                    ]
+                }
+            ]
+        }
+    },
+    "meta": {
+        "folder": "Events",
+        "filename": "postEventUnpublish",
+        "resourceName": "Unpublish",
+        "transition": "Unpublish an Event",
+        "transitionResponseTypes": {
+            "200": "\\Eventbrite\\Model\\ModelBase",
+            "400": "\\Eventbrite\\Model\\DataType\\Error"
+        },
+        "transaction": "httpTransaction",
+        "messageType": "httpResponse",
+        "resourceGroupName": "Events",
+        "resourceGroup": "\\Eventbrite\\Resource\\Events",
+        "transactionMethodName": "postEventUnpublish",
+        "responseStatusCode": 400,
+        "responseType": "\\Eventbrite\\Model\\DataType\\Error"
+    }
+}

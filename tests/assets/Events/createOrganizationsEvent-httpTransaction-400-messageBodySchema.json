@@ -1,0 +1,56 @@
+{
+    "$schema": "http:\/\/json-schema.org\/draft-07\/schema#",
+    "type": "object",
+    "properties": {
+        "error_description": {
+            "type": "string"
+        },
+        "error_detail": {
+            "type": "object"
+        },
+        "status_code": {
+            "type": "number"
+        },
+        "error": {
+            "anyOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "enum": [
+                        "DATE_CONFLICT",
+                        "DIFFERENT_TIMEZONES",
+                        "INVALID_DATE",
+                        "INVENTORY_TYPE_CONFLICT",
+                        "INVITE_CONFLICT",
+                        "NO_DEFAULT_ORGANIZER",
+                        "NO_PACKAGE_SELECTED",
+                        "NO_VENUE",
+                        "PASSWORD_CONFLICT",
+                        "SHARE_INVITE_CONFLICT",
+                        "UNSUPPORTED_TIMEZONE",
+                        "VENUE_AND_ONLINE",
+                        "SUMMARY_DESCRIPTION_CONFLICT"
+                    ]
+                }
+            ]
+        }
+    },
+    "meta": {
+        "folder": "Events",
+        "filename": "createOrganizationsEvent",
+        "resourceName": "Create",
+        "transition": "Create an Event",
+        "transitionResponseTypes": {
+            "200": "\\Eventbrite\\Model\\DataType\\Event",
+            "400": "\\Eventbrite\\Model\\DataType\\Error"
+        },
+        "transaction": "httpTransaction",
+        "messageType": "httpResponse",
+        "resourceGroupName": "Events",
+        "resourceGroup": "\\Eventbrite\\Resource\\Events",
+        "transactionMethodName": "createOrganizationsEvent",
+        "responseStatusCode": 400,
+        "responseType": "\\Eventbrite\\Model\\DataType\\Error"
+    }
+}

@@ -1,0 +1,35 @@
+{
+    "$schema": "http:\/\/json-schema.org\/draft-07\/schema#",
+    "type": "object",
+    "properties": {
+        "name": {
+            "type": "string"
+        },
+        "status": {
+            "type": "string"
+        },
+        "event_ticket_ids": {
+            "type": "string"
+        },
+        "tickets": {
+            "type": "object"
+        }
+    },
+    "meta": {
+        "folder": "TicketGroups",
+        "filename": "createOrganizationTicketGroups",
+        "resourceName": "Create",
+        "transition": "Create a Ticket Group",
+        "transitionResponseTypes": {
+            "200": "\\Eventbrite\\Model\\DataType\\TicketGroup",
+            "400": "\\Eventbrite\\Model\\DataType\\Error"
+        },
+        "transaction": "httpTransaction",
+        "messageType": "httpResponse",
+        "resourceGroupName": "TicketGroups",
+        "resourceGroup": "\\Eventbrite\\Resource\\TicketGroups",
+        "transactionMethodName": "createOrganizationTicketGroups",
+        "responseStatusCode": 200,
+        "responseType": "\\Eventbrite\\Model\\DataType\\TicketGroup"
+    }
+}

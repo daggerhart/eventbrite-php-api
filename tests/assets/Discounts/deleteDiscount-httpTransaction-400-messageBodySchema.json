@@ -1,0 +1,42 @@
+{
+    "$schema": "http:\/\/json-schema.org\/draft-07\/schema#",
+    "type": "object",
+    "properties": {
+        "error_description": {
+            "type": "string"
+        },
+        "error_detail": {
+            "type": "object"
+        },
+        "status_code": {
+            "type": "number"
+        },
+        "error": {
+            "anyOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "const": "DISCOUNT_CANNOT_BE_DELETED"
+                }
+            ]
+        }
+    },
+    "meta": {
+        "folder": "Discounts",
+        "filename": "deleteDiscount",
+        "resourceName": "Delete",
+        "transition": "Delete a Discount",
+        "transitionResponseTypes": {
+            "200": "\\Eventbrite\\Model\\DataType\\Discount",
+            "400": "\\Eventbrite\\Model\\DataType\\Error"
+        },
+        "transaction": "httpTransaction",
+        "messageType": "httpResponse",
+        "resourceGroupName": "Discounts",
+        "resourceGroup": "\\Eventbrite\\Resource\\Discounts",
+        "transactionMethodName": "deleteDiscount",
+        "responseStatusCode": 400,
+        "responseType": "\\Eventbrite\\Model\\DataType\\Error"
+    }
+}

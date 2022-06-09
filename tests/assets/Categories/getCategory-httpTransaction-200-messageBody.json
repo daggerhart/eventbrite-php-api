@@ -1,0 +1,18 @@
+{
+    "category": {
+        "id": "103",
+        "resource_uri": "https:\/\/www.eventbriteapi.com\/v3\/categories\/103\/",
+        "name": "Music",
+        "name_localized": "Music",
+        "short_name": "Music",
+        "short_name_localized": "Music",
+        "subcategories": [
+            {
+                "id": "3003",
+                "resource_uri": "https:\/\/www.eventbriteapi.com\/v3\/subcategories\/3003\/",
+                "name": "Classical",
+                "parent_category": []
+            }
+        ]
+    }
+}

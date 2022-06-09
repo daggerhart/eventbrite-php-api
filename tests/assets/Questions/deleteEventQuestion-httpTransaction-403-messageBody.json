@@ -1,0 +1,5 @@
+{
+    "status_code": 403,
+    "error_description": "You do not have permission to access the resource you requested.",
+    "error": "NOT_AUTHORIZED"
+}

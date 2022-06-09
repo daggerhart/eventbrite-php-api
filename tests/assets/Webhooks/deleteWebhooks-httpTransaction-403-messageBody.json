@@ -1,0 +1,5 @@
+{
+    "error_description": "This user is not able to use legacy user endpoints, please use the organization equivalent.",
+    "status_code": "403",
+    "error": "NOT_AUTHORIZED"
+}

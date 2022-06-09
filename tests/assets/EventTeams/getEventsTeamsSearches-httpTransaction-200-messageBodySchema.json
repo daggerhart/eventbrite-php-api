@@ -1,0 +1,48 @@
+{
+    "$schema": "http:\/\/json-schema.org\/draft-07\/schema#",
+    "type": "object",
+    "properties": {
+        "pagination": {
+            "type": "object",
+            "properties": {
+                "object_count": {
+                    "type": "number"
+                },
+                "page_number": {
+                    "type": "number"
+                },
+                "page_size": {
+                    "type": "number"
+                },
+                "page_count": {
+                    "type": "number"
+                },
+                "continuation": {
+                    "type": "string"
+                },
+                "has_more_items": {
+                    "type": "boolean"
+                }
+            }
+        },
+        "teams": {
+            "type": "array"
+        }
+    },
+    "meta": {
+        "folder": "EventTeams",
+        "filename": "getEventsTeamsSearches",
+        "resourceName": "Search",
+        "transition": "Search teams by name Team",
+        "transitionResponseTypes": {
+            "200": "\\Eventbrite\\Model\\Collection\\object"
+        },
+        "transaction": "httpTransaction",
+        "messageType": "httpResponse",
+        "resourceGroupName": "EventTeams",
+        "resourceGroup": "\\Eventbrite\\Resource\\EventTeams",
+        "transactionMethodName": "getEventsTeamsSearches",
+        "responseStatusCode": 200,
+        "responseType": "\\Eventbrite\\Model\\Collection\\object"
+    }
+}

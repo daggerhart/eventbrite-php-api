@@ -1,0 +1,13 @@
+{
+    "locale": "en_US",
+    "formats": [
+        {
+            "id": "2",
+            "name": "Seminar or Talk",
+            "name_localized": "Seminar or Talk",
+            "short_name": "Seminar",
+            "short_name_localized": "Seminar",
+            "resource_uri": "https:\/\/www.eventbriteapi.com\/v3\/formats\/2\/"
+        }
+    ]
+}

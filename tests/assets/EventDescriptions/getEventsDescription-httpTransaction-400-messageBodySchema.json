@@ -1,0 +1,36 @@
+{
+    "$schema": "http:\/\/json-schema.org\/draft-07\/schema#",
+    "type": "object",
+    "properties": {
+        "error": {
+            "anyOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "enum": [
+                        "NOT_AUTHORIZED",
+                        "ARGUMENTS_ERROR"
+                    ]
+                }
+            ]
+        }
+    },
+    "meta": {
+        "folder": "EventDescriptions",
+        "filename": "getEventsDescription",
+        "resourceName": "Retrieve",
+        "transition": "Retrieve Full HTML Description",
+        "transitionResponseTypes": {
+            "200": "\\Eventbrite\\Model\\ModelBase",
+            "400": "\\Eventbrite\\Model\\ModelBase"
+        },
+        "transaction": "httpTransaction",
+        "messageType": "httpResponse",
+        "resourceGroupName": "EventDescriptions",
+        "resourceGroup": "\\Eventbrite\\Resource\\EventDescriptions",
+        "transactionMethodName": "getEventsDescription",
+        "responseStatusCode": 400,
+        "responseType": "\\Eventbrite\\Model\\ModelBase"
+    }
+}

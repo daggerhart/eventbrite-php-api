@@ -1,0 +1,12 @@
+{
+    "show_start_date": true,
+    "show_end_date": true,
+    "show_start_end_time": true,
+    "show_timezone": true,
+    "show_map": true,
+    "show_remaining": false,
+    "show_organizer_facebook": false,
+    "show_organizer_twitter": false,
+    "show_facebook_friends_going": false,
+    "terminology": "tickets_vertical"
+}

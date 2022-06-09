@@ -1,0 +1,47 @@
+{
+    "$schema": "http:\/\/json-schema.org\/draft-07\/schema#",
+    "type": "object",
+    "properties": {
+        "error_description": {
+            "type": "string"
+        },
+        "error_detail": {
+            "type": "object"
+        },
+        "status_code": {
+            "type": "number"
+        },
+        "error": {
+            "anyOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "enum": [
+                        "CODE_AND_CODE_FILTER_PROVIDED",
+                        "INVALID",
+                        "INVALID_USAGE_FOR_EVENT_ID",
+                        "ORDER_BY_NOT_SUPPORTED"
+                    ]
+                }
+            ]
+        }
+    },
+    "meta": {
+        "folder": "Discounts",
+        "filename": "getOrganizationDiscountsScope",
+        "resourceName": "List",
+        "transition": "Search Discounts by Organization",
+        "transitionResponseTypes": {
+            "200": "\\Eventbrite\\Model\\ModelBase",
+            "400": "\\Eventbrite\\Model\\DataType\\Error"
+        },
+        "transaction": "httpTransaction",
+        "messageType": "httpResponse",
+        "resourceGroupName": "Discounts",
+        "resourceGroup": "\\Eventbrite\\Resource\\Discounts",
+        "transactionMethodName": "getOrganizationDiscountsScope",
+        "responseStatusCode": 400,
+        "responseType": "\\Eventbrite\\Model\\DataType\\Error"
+    }
+}

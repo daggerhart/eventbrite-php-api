@@ -1,0 +1,42 @@
+{
+    "$schema": "http:\/\/json-schema.org\/draft-07\/schema#",
+    "type": "object",
+    "properties": {
+        "error_description": {
+            "type": "string"
+        },
+        "error_detail": {
+            "type": "object"
+        },
+        "status_code": {
+            "type": "number"
+        },
+        "error": {
+            "anyOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "const": "EXCEEDS_LIMIT"
+                }
+            ]
+        }
+    },
+    "meta": {
+        "folder": "TicketGroups",
+        "filename": "createOrganizationTicketGroup",
+        "resourceName": "Create",
+        "transition": "Create a Ticket Group",
+        "transitionResponseTypes": {
+            "200": "\\Eventbrite\\Model\\DataType\\TicketGroup",
+            "400": "\\Eventbrite\\Model\\DataType\\Error"
+        },
+        "transaction": "httpTransaction",
+        "messageType": "httpResponse",
+        "resourceGroupName": "TicketGroups",
+        "resourceGroup": "\\Eventbrite\\Resource\\TicketGroups",
+        "transactionMethodName": "createOrganizationTicketGroup",
+        "responseStatusCode": 400,
+        "responseType": "\\Eventbrite\\Model\\DataType\\Error"
+    }
+}

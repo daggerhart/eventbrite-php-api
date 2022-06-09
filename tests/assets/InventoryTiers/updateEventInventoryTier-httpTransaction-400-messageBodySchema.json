@@ -1,0 +1,40 @@
+{
+    "$schema": "http:\/\/json-schema.org\/draft-07\/schema#",
+    "type": "object",
+    "properties": {
+        "error_description": {
+            "type": "string"
+        },
+        "error_detail": {
+            "type": "object"
+        },
+        "status_code": {
+            "type": "number"
+        },
+        "error": {
+            "enum": [
+                "ARGUMENTS_ERROR",
+                "HOLD_QUANTITIES_EXCEEDS_CAPACITY_TOTAL"
+            ]
+        }
+    },
+    "meta": {
+        "folder": "InventoryTiers",
+        "filename": "updateEventInventoryTier",
+        "resourceName": "Update",
+        "transition": "Update an Inventory Tier",
+        "transitionResponseTypes": {
+            "200": "\\Eventbrite\\Model\\ModelBase",
+            "400": "\\Eventbrite\\Model\\DataType\\Error",
+            "403": "\\Eventbrite\\Model\\DataType\\Error",
+            "404": "\\Eventbrite\\Model\\DataType\\Error"
+        },
+        "transaction": "httpTransaction",
+        "messageType": "httpResponse",
+        "resourceGroupName": "InventoryTiers",
+        "resourceGroup": "\\Eventbrite\\Resource\\InventoryTiers",
+        "transactionMethodName": "updateEventInventoryTier",
+        "responseStatusCode": 400,
+        "responseType": "\\Eventbrite\\Model\\DataType\\Error"
+    }
+}

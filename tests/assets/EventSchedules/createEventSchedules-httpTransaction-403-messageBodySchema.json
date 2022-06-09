@@ -1,0 +1,43 @@
+{
+    "$schema": "http:\/\/json-schema.org\/draft-07\/schema#",
+    "type": "object",
+    "properties": {
+        "error_description": {
+            "type": "string"
+        },
+        "error_detail": {
+            "type": "object"
+        },
+        "status_code": {
+            "type": "number"
+        },
+        "error": {
+            "anyOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "const": "NOT_AUTHORIZED"
+                }
+            ]
+        }
+    },
+    "meta": {
+        "folder": "EventSchedules",
+        "filename": "createEventSchedules",
+        "resourceName": "Create",
+        "transition": "Create an event schedule",
+        "transitionResponseTypes": {
+            "200": "\\Eventbrite\\Model\\DataType\\Schedule",
+            "400": "\\Eventbrite\\Model\\DataType\\Error",
+            "403": "\\Eventbrite\\Model\\DataType\\Error"
+        },
+        "transaction": "httpTransaction",
+        "messageType": "httpResponse",
+        "resourceGroupName": "EventSchedules",
+        "resourceGroup": "\\Eventbrite\\Resource\\EventSchedules",
+        "transactionMethodName": "createEventSchedules",
+        "responseStatusCode": 403,
+        "responseType": "\\Eventbrite\\Model\\DataType\\Error"
+    }
+}

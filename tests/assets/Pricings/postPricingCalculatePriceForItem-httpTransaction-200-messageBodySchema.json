@@ -1,0 +1,120 @@
+{
+    "$schema": "http:\/\/json-schema.org\/draft-07\/schema#",
+    "type": "object",
+    "properties": {
+        "item_pricing": {
+            "type": "object",
+            "properties": {
+                "organizer_share": {
+                    "type": "object",
+                    "properties": {
+                        "currency": {
+                            "type": "string"
+                        },
+                        "value": {
+                            "type": "number"
+                        },
+                        "major_value": {
+                            "type": "string"
+                        },
+                        "display": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "currency",
+                        "value",
+                        "major_value",
+                        "display"
+                    ]
+                },
+                "total_fees": {
+                    "type": "object",
+                    "properties": {
+                        "currency": {
+                            "type": "string"
+                        },
+                        "value": {
+                            "type": "number"
+                        },
+                        "major_value": {
+                            "type": "string"
+                        },
+                        "display": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "currency",
+                        "value",
+                        "major_value",
+                        "display"
+                    ]
+                },
+                "total_taxes": {
+                    "type": "object",
+                    "properties": {
+                        "currency": {
+                            "type": "string"
+                        },
+                        "value": {
+                            "type": "number"
+                        },
+                        "major_value": {
+                            "type": "string"
+                        },
+                        "display": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "currency",
+                        "value",
+                        "major_value",
+                        "display"
+                    ]
+                },
+                "total_price": {
+                    "type": "object",
+                    "properties": {
+                        "currency": {
+                            "type": "string"
+                        },
+                        "value": {
+                            "type": "number"
+                        },
+                        "major_value": {
+                            "type": "string"
+                        },
+                        "display": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "currency",
+                        "value",
+                        "major_value",
+                        "display"
+                    ]
+                }
+            }
+        }
+    },
+    "meta": {
+        "folder": "Pricings",
+        "filename": "postPricingCalculatePriceForItem",
+        "resourceName": "Items",
+        "transition": "Calculate Items",
+        "transitionResponseTypes": {
+            "200": "\\Eventbrite\\Model\\ModelBase",
+            "400": "\\Eventbrite\\Model\\DataType\\Error"
+        },
+        "transaction": "httpTransaction",
+        "messageType": "httpResponse",
+        "resourceGroupName": "Pricings",
+        "resourceGroup": "\\Eventbrite\\Resource\\Pricings",
+        "transactionMethodName": "postPricingCalculatePriceForItem",
+        "responseStatusCode": 200,
+        "responseType": "\\Eventbrite\\Model\\ModelBase"
+    }
+}

@@ -1,0 +1,95 @@
+{
+    "access_type": "private",
+    "modules": [
+        {
+            "id": "",
+            "data": {
+                "body": {
+                    "alignment": "left",
+                    "text": ""
+                }
+            },
+            "layout": "image_left",
+            "timed_display": {
+                "absolute_start_utc": "",
+                "absolute_end_utc": "",
+                "relative_start (number) - Minutes to which a module is relatively shown. Either absolute_start_utc\/absolute_end_utc OR relative_start\/relative_end should be provided": "",
+                "relative_end (number) - Minutes to which a module is relatively hidden. Optional - if relative_end is provided, then relative_start must be provided with it.": ""
+            },
+            "resource_uris": [],
+            "semantic_purpose": "",
+            "type": "text"
+        },
+        {
+            "id": "",
+            "data": {
+                "image": {
+                    "image_id": "",
+                    "display_size": "small",
+                    "corner_style": "rounded",
+                    "alt": ""
+                },
+                "caption": {
+                    "body": {
+                        "alignment": "left",
+                        "text": ""
+                    }
+                },
+                "id": ""
+            },
+            "layout": "image_left",
+            "timed_display": {
+                "absolute_start_utc": "",
+                "absolute_end_utc": "",
+                "relative_start (number) - Minutes to which a module is relatively shown. Either absolute_start_utc\/absolute_end_utc OR relative_start\/relative_end should be provided": "",
+                "relative_end (number) - Minutes to which a module is relatively hidden. Optional - if relative_end is provided, then relative_start must be provided with it.": ""
+            },
+            "resource_uris": [],
+            "semantic_purpose": "",
+            "type": "image"
+        },
+        {
+            "id": "",
+            "data": {
+                "video": {
+                    "display_size": "",
+                    "embed_url": "",
+                    "thumbnail_url": "",
+                    "url": ""
+                },
+                "caption": {
+                    "body": {
+                        "alignment": "left",
+                        "text": ""
+                    }
+                }
+            },
+            "layout": "image_left",
+            "timed_display": {
+                "absolute_start_utc": "",
+                "absolute_end_utc": "",
+                "relative_start (number) - Minutes to which a module is relatively shown. Either absolute_start_utc\/absolute_end_utc OR relative_start\/relative_end should be provided": "",
+                "relative_end (number) - Minutes to which a module is relatively hidden. Optional - if relative_end is provided, then relative_start must be provided with it.": ""
+            },
+            "resource_uris": [],
+            "semantic_purpose": "",
+            "type": "video"
+        }
+    ],
+    "page_version_number": "",
+    "pagination": {
+        "object_count": 1,
+        "page_number": 1,
+        "page_size": 1,
+        "page_count": 1,
+        "continuation": "dGhpcyBpcyBhIGNvbnRpbnVhdGlvbiB0b2tlbg",
+        "has_more_items": false
+    },
+    "purpose": "listing",
+    "resource_uris": {
+        "add_module": "",
+        "preview_module": "",
+        "publish": "",
+        "self": ""
+    }
+}

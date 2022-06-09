@@ -1,0 +1,51 @@
+{
+    "$schema": "http:\/\/json-schema.org\/draft-07\/schema#",
+    "type": "object",
+    "properties": {
+        "error_description": {
+            "type": "string"
+        },
+        "error_detail": {
+            "type": "object"
+        },
+        "status_code": {
+            "type": "number"
+        },
+        "error": {
+            "anyOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "enum": [
+                        "AMOUNT_AND_PERCENT_OFF_PROVIDED",
+                        "END_DATE_AND_END_DATE_RELATIVE_PROVIDED: Cannot provide discount.end_date and discount.end_date_relative at the same time.",
+                        "INVALID",
+                        "MULTI_EVENT_DISCOUNT_NOT_SUPPORTED",
+                        "PUBLIC_DISCOUNT_NOT_SUPPORTED",
+                        "START_DATE_AND_START_DATE_RELATIVE_PROVIDED",
+                        "EXCEED_MAXIMUM_DISCOUNTS_PER_HOLD",
+                        "ARGUMENTS_ERROR"
+                    ]
+                }
+            ]
+        }
+    },
+    "meta": {
+        "folder": "Discounts",
+        "filename": "updateDiscount",
+        "resourceName": "Update",
+        "transition": "Update a Discount",
+        "transitionResponseTypes": {
+            "200": "\\Eventbrite\\Model\\DataType\\Discount",
+            "400": "\\Eventbrite\\Model\\DataType\\DiscountCreateError"
+        },
+        "transaction": "httpTransaction",
+        "messageType": "httpResponse",
+        "resourceGroupName": "Discounts",
+        "resourceGroup": "\\Eventbrite\\Resource\\Discounts",
+        "transactionMethodName": "updateDiscount",
+        "responseStatusCode": 400,
+        "responseType": "\\Eventbrite\\Model\\DataType\\DiscountCreateError"
+    }
+}

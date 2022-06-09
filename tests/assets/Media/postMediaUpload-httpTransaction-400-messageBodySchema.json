@@ -1,0 +1,47 @@
+{
+    "$schema": "http:\/\/json-schema.org\/draft-07\/schema#",
+    "type": "object",
+    "properties": {
+        "error_description": {
+            "type": "string"
+        },
+        "error_detail": {
+            "type": "object"
+        },
+        "status_code": {
+            "type": "number"
+        },
+        "error": {
+            "anyOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "enum": [
+                        "BAD_FILE",
+                        "BAD_FORMAT",
+                        "BAD_UPLOAD_TOKEN",
+                        "S3_ERROR"
+                    ]
+                }
+            ]
+        }
+    },
+    "meta": {
+        "folder": "Media",
+        "filename": "postMediaUpload",
+        "resourceName": "Upload",
+        "transition": "Upload a Media File",
+        "transitionResponseTypes": {
+            "200": "\\Eventbrite\\Model\\DataType\\MediaUploadPost",
+            "400": "\\Eventbrite\\Model\\DataType\\Error"
+        },
+        "transaction": "httpTransaction",
+        "messageType": "httpResponse",
+        "resourceGroupName": "Media",
+        "resourceGroup": "\\Eventbrite\\Resource\\Media",
+        "transactionMethodName": "postMediaUpload",
+        "responseStatusCode": 400,
+        "responseType": "\\Eventbrite\\Model\\DataType\\Error"
+    }
+}

@@ -1,0 +1,60 @@
+{
+    "$schema": "http:\/\/json-schema.org\/draft-07\/schema#",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "string"
+        },
+        "name": {
+            "type": "string"
+        },
+        "creator": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "emails": {
+                    "type": "array"
+                }
+            }
+        },
+        "changed": {
+            "type": "string"
+        },
+        "created": {
+            "type": "string"
+        },
+        "attendee_count": {
+            "type": "number"
+        },
+        "token": {
+            "type": "string"
+        },
+        "event_id": {
+            "type": "string"
+        },
+        "date_joined": {
+            "type": "string"
+        }
+    },
+    "meta": {
+        "folder": "EventTeams",
+        "filename": "getEventsTeam",
+        "resourceName": "Retrieve",
+        "transition": "Retrieve Team",
+        "transitionResponseTypes": {
+            "200": "\\Eventbrite\\Model\\DataType\\EventTeamResponse"
+        },
+        "transaction": "httpTransaction",
+        "messageType": "httpResponse",
+        "resourceGroupName": "EventTeams",
+        "resourceGroup": "\\Eventbrite\\Resource\\EventTeams",
+        "transactionMethodName": "getEventsTeam",
+        "responseStatusCode": 200,
+        "responseType": "\\Eventbrite\\Model\\DataType\\EventTeamResponse"
+    }
+}

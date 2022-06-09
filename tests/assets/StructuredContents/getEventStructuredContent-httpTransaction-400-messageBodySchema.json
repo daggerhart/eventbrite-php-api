@@ -1,0 +1,36 @@
+{
+    "$schema": "http:\/\/json-schema.org\/draft-07\/schema#",
+    "type": "object",
+    "properties": {
+        "error": {
+            "anyOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "enum": [
+                        "NOT_AUTHORIZED",
+                        "ARGUMENTS_ERROR"
+                    ]
+                }
+            ]
+        }
+    },
+    "meta": {
+        "folder": "StructuredContents",
+        "filename": "getEventStructuredContent",
+        "resourceName": "Retrieve",
+        "transition": "Retrieve Latest Published Version of Structured Content by Event Id",
+        "transitionResponseTypes": {
+            "200": "\\Eventbrite\\Model\\DataType\\StructuredContentPage",
+            "400": "\\Eventbrite\\Model\\ModelBase"
+        },
+        "transaction": "httpTransaction",
+        "messageType": "httpResponse",
+        "resourceGroupName": "StructuredContents",
+        "resourceGroup": "\\Eventbrite\\Resource\\StructuredContents",
+        "transactionMethodName": "getEventStructuredContent",
+        "responseStatusCode": 400,
+        "responseType": "\\Eventbrite\\Model\\ModelBase"
+    }
+}

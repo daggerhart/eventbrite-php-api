@@ -1,0 +1,25 @@
+{
+    "$schema": "http:\/\/json-schema.org\/draft-07\/schema#",
+    "type": "object",
+    "properties": {
+        "ticket_group_ids": {
+            "type": "array"
+        }
+    },
+    "meta": {
+        "folder": "TicketGroups",
+        "filename": "postOrganizationsEventsTicketClassesTicketGroup",
+        "resourceName": "Add Ticket Class",
+        "transition": "Add a Ticket Class to  Ticket Groups",
+        "transitionResponseTypes": {
+            "204": "\\Eventbrite\\Model\\ModelBase"
+        },
+        "transaction": "httpTransaction",
+        "messageType": "httpRequest",
+        "resourceGroupName": "TicketGroups",
+        "resourceGroup": "\\Eventbrite\\Resource\\TicketGroups",
+        "transactionMethodName": "postOrganizationsEventsTicketClassesTicketGroup",
+        "responseStatusCode": 204,
+        "responseType": "\\Eventbrite\\Model\\ModelBase"
+    }
+}

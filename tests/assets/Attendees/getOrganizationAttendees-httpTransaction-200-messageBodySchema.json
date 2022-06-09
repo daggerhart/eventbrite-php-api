@@ -1,0 +1,48 @@
+{
+    "$schema": "http:\/\/json-schema.org\/draft-07\/schema#",
+    "type": "object",
+    "properties": {
+        "pagination": {
+            "type": "object",
+            "properties": {
+                "object_count": {
+                    "type": "number"
+                },
+                "page_number": {
+                    "type": "number"
+                },
+                "page_size": {
+                    "type": "number"
+                },
+                "page_count": {
+                    "type": "number"
+                },
+                "continuation": {
+                    "type": "string"
+                },
+                "has_more_items": {
+                    "type": "boolean"
+                }
+            }
+        },
+        "attendees": {
+            "type": "array"
+        }
+    },
+    "meta": {
+        "folder": "Attendees",
+        "filename": "getOrganizationAttendees",
+        "resourceName": "List",
+        "transition": "List Attendees by Organization",
+        "transitionResponseTypes": {
+            "200": "\\Eventbrite\\Model\\Collection\\Attendee"
+        },
+        "transaction": "httpTransaction",
+        "messageType": "httpResponse",
+        "resourceGroupName": "Attendees",
+        "resourceGroup": "\\Eventbrite\\Resource\\Attendees",
+        "transactionMethodName": "getOrganizationAttendees",
+        "responseStatusCode": 200,
+        "responseType": "\\Eventbrite\\Model\\Collection\\Attendee"
+    }
+}

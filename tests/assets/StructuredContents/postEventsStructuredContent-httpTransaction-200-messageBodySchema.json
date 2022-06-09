@@ -1,0 +1,95 @@
+{
+    "$schema": "http:\/\/json-schema.org\/draft-07\/schema#",
+    "type": "object",
+    "properties": {
+        "access_type": {
+            "anyOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "enum": [
+                        "private",
+                        "public"
+                    ]
+                }
+            ]
+        },
+        "modules": {
+            "type": "array"
+        },
+        "page_version_number": {
+            "type": "string"
+        },
+        "pagination": {
+            "type": "object",
+            "properties": {
+                "object_count": {
+                    "type": "number"
+                },
+                "page_number": {
+                    "type": "number"
+                },
+                "page_size": {
+                    "type": "number"
+                },
+                "page_count": {
+                    "type": "number"
+                },
+                "continuation": {
+                    "type": "string"
+                },
+                "has_more_items": {
+                    "type": "boolean"
+                }
+            }
+        },
+        "purpose": {
+            "anyOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "enum": [
+                        "listing",
+                        "digital_content"
+                    ]
+                }
+            ]
+        },
+        "resource_uris": {
+            "type": "object",
+            "properties": {
+                "add_module": {
+                    "type": "string"
+                },
+                "preview_module": {
+                    "type": "string"
+                },
+                "publish": {
+                    "type": "string"
+                },
+                "self": {
+                    "type": "string"
+                }
+            }
+        }
+    },
+    "meta": {
+        "folder": "StructuredContents",
+        "filename": "postEventsStructuredContent",
+        "resourceName": "Create\/Update",
+        "transition": "Set Structured Content by Event Id and Version",
+        "transitionResponseTypes": {
+            "200": "\\Eventbrite\\Model\\DataType\\StructuredContentPage",
+            "400": "\\Eventbrite\\Model\\ModelBase"
+        },
+        "transaction": "httpTransaction",
+        "messageType": "httpResponse",
+        "resourceGroupName": "StructuredContents",
+        "resourceGroup": "\\Eventbrite\\Resource\\StructuredContents",
+        "transactionMethodName": "postEventsStructuredContent",
+        "responseStatusCode": 200,
+        "responseType": "\\Eventbrite\\Model\\DataType\\StructuredContentPage"
+    }
+}

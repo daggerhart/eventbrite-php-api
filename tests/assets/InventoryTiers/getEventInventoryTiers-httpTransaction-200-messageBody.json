@@ -1,0 +1,45 @@
+{
+    "pagination": {
+        "object_count": 1,
+        "page_number": 1,
+        "page_size": 1,
+        "page_count": 1,
+        "continuation": "dGhpcyBpcyBhIGNvbnRpbnVhdGlvbiB0b2tlbg",
+        "has_more_items": false
+    },
+    "inventory_tiers": [
+        {
+            "name": "Tier 1",
+            "tier": 1,
+            "seatmap_number": 1,
+            "sort_order": 1,
+            "color": "#fac114",
+            "quantity_total": 30,
+            "count_against_event_capacity": true,
+            "image_id": "1234",
+            "id": "1234",
+            "event_id": "5678",
+            "quantity_held": 5,
+            "quantity_sold": 10,
+            "quantity_pending": 2,
+            "ticket_class_ids": [
+                "1234",
+                "5678"
+            ],
+            "capacity_total": 100,
+            "holds": [
+                {
+                    "id": "I1234",
+                    "event_id": "5678",
+                    "name": "Marketing",
+                    "abbreviation": "MKT",
+                    "sort_order": 1,
+                    "color": "#fac114",
+                    "quantity_sold": 10,
+                    "quantity_total": 30,
+                    "quantity_pending": 5
+                }
+            ]
+        }
+    ]
+}

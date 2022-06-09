@@ -1,0 +1,28 @@
+{
+    "$schema": "http:\/\/json-schema.org\/draft-07\/schema#",
+    "type": "object",
+    "properties": {
+        "deleted": {
+            "type": "boolean"
+        }
+    },
+    "required": [
+        "deleted"
+    ],
+    "meta": {
+        "folder": "TicketGroups",
+        "filename": "deleteTicketGroups",
+        "resourceName": "Delete",
+        "transition": "Delete a Ticket Group",
+        "transitionResponseTypes": {
+            "200": "\\Eventbrite\\Model\\ModelBase"
+        },
+        "transaction": "httpTransaction",
+        "messageType": "httpResponse",
+        "resourceGroupName": "TicketGroups",
+        "resourceGroup": "\\Eventbrite\\Resource\\TicketGroups",
+        "transactionMethodName": "deleteTicketGroups",
+        "responseStatusCode": 200,
+        "responseType": "\\Eventbrite\\Model\\ModelBase"
+    }
+}

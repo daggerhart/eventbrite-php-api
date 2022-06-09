@@ -1,0 +1,45 @@
+{
+    "$schema": "http:\/\/json-schema.org\/draft-07\/schema#",
+    "type": "object",
+    "properties": {
+        "error_description": {
+            "type": "string"
+        },
+        "error_detail": {
+            "type": "object"
+        },
+        "status_code": {
+            "type": "number"
+        },
+        "error": {
+            "anyOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "enum": [
+                        "INSUFFICIENT_PACKAGE",
+                        "NOT_ALLOWED"
+                    ]
+                }
+            ]
+        }
+    },
+    "meta": {
+        "folder": "Questions",
+        "filename": "createEventCannedQuestions",
+        "resourceName": "Create Default Question",
+        "transition": "Create a Default Question for an Event",
+        "transitionResponseTypes": {
+            "200": "\\Eventbrite\\Model\\DataType\\CannedQuestion",
+            "400": "\\Eventbrite\\Model\\DataType\\Error"
+        },
+        "transaction": "httpTransaction",
+        "messageType": "httpResponse",
+        "resourceGroupName": "Questions",
+        "resourceGroup": "\\Eventbrite\\Resource\\Questions",
+        "transactionMethodName": "createEventCannedQuestions",
+        "responseStatusCode": 400,
+        "responseType": "\\Eventbrite\\Model\\DataType\\Error"
+    }
+}

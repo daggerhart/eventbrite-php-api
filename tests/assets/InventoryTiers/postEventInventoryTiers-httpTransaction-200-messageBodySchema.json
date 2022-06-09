@@ -1,0 +1,28 @@
+{
+    "$schema": "http:\/\/json-schema.org\/draft-07\/schema#",
+    "type": "object",
+    "properties": {
+        "inventory_tiers": {
+            "type": "array"
+        }
+    },
+    "meta": {
+        "folder": "InventoryTiers",
+        "filename": "postEventInventoryTiers",
+        "resourceName": "Update",
+        "transition": "Update Multiple Inventory Tiers",
+        "transitionResponseTypes": {
+            "200": "\\Eventbrite\\Model\\ModelBase",
+            "400": "\\Eventbrite\\Model\\DataType\\Error",
+            "403": "\\Eventbrite\\Model\\DataType\\Error",
+            "404": "\\Eventbrite\\Model\\DataType\\Error"
+        },
+        "transaction": "httpTransaction",
+        "messageType": "httpResponse",
+        "resourceGroupName": "InventoryTiers",
+        "resourceGroup": "\\Eventbrite\\Resource\\InventoryTiers",
+        "transactionMethodName": "postEventInventoryTiers",
+        "responseStatusCode": 200,
+        "responseType": "\\Eventbrite\\Model\\ModelBase"
+    }
+}

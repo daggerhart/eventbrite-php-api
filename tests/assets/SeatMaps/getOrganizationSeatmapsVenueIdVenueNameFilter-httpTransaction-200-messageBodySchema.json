@@ -1,0 +1,25 @@
+{
+    "$schema": "http:\/\/json-schema.org\/draft-07\/schema#",
+    "type": "object",
+    "properties": {
+        "seatmaps": {
+            "type": "array"
+        }
+    },
+    "meta": {
+        "folder": "SeatMaps",
+        "filename": "getOrganizationSeatmapsVenueIdVenueNameFilter",
+        "resourceName": "List Seat Maps by Organization",
+        "transition": "List Seat Maps by Organization",
+        "transitionResponseTypes": {
+            "200": "\\Eventbrite\\Model\\ModelBase"
+        },
+        "transaction": "httpTransaction",
+        "messageType": "httpResponse",
+        "resourceGroupName": "SeatMaps",
+        "resourceGroup": "\\Eventbrite\\Resource\\SeatMaps",
+        "transactionMethodName": "getOrganizationSeatmapsVenueIdVenueNameFilter",
+        "responseStatusCode": 200,
+        "responseType": "\\Eventbrite\\Model\\ModelBase"
+    }
+}

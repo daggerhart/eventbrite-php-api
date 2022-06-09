@@ -1,0 +1,18 @@
+{
+    "pagination": {
+        "object_count": 1,
+        "page_number": 1,
+        "page_size": 1,
+        "page_count": 1,
+        "continuation": "dGhpcyBpcyBhIGNvbnRpbnVhdGlvbiB0b2tlbg",
+        "has_more_items": false
+    },
+    "organizations": [
+        {
+            "name": "Awesome Org",
+            "vertical": "default",
+            "image_id": "12345",
+            "id": "12345"
+        }
+    ]
+}

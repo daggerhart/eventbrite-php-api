@@ -1,0 +1,48 @@
+{
+    "$schema": "http:\/\/json-schema.org\/draft-07\/schema#",
+    "type": "object",
+    "properties": {
+        "pagination": {
+            "type": "object",
+            "properties": {
+                "object_count": {
+                    "type": "number"
+                },
+                "page_number": {
+                    "type": "number"
+                },
+                "page_size": {
+                    "type": "number"
+                },
+                "page_count": {
+                    "type": "number"
+                },
+                "continuation": {
+                    "type": "string"
+                },
+                "has_more_items": {
+                    "type": "boolean"
+                }
+            }
+        },
+        "ticket_classes": {
+            "type": "array"
+        }
+    },
+    "meta": {
+        "folder": "TicketClasses",
+        "filename": "getEventTicketClasses",
+        "resourceName": "List",
+        "transition": "List Ticket Classes by Event",
+        "transitionResponseTypes": {
+            "200": "\\Eventbrite\\Model\\PaginationCollection"
+        },
+        "transaction": "httpTransaction",
+        "messageType": "httpResponse",
+        "resourceGroupName": "TicketClasses",
+        "resourceGroup": "\\Eventbrite\\Resource\\TicketClasses",
+        "transactionMethodName": "getEventTicketClasses",
+        "responseStatusCode": 200,
+        "responseType": "\\Eventbrite\\Model\\PaginationCollection"
+    }
+}

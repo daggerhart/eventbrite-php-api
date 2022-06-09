@@ -1,0 +1,22 @@
+{
+    "pagination": {
+        "object_count": 1,
+        "page_number": 1,
+        "page_size": 1,
+        "page_count": 1,
+        "continuation": "dGhpcyBpcyBhIGNvbnRpbnVhdGlvbiB0b2tlbg",
+        "has_more_items": false
+    },
+    "teams": [
+        {
+            "id": "",
+            "token": "",
+            "name": "",
+            "has_password": false,
+            "is_full": false,
+            "logo": "",
+            "spots_left": 0,
+            "is_team_member": false
+        }
+    ]
+}

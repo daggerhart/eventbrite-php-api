@@ -1,0 +1,48 @@
+{
+    "$schema": "http:\/\/json-schema.org\/draft-07\/schema#",
+    "type": "object",
+    "properties": {
+        "pagination": {
+            "type": "object",
+            "properties": {
+                "object_count": {
+                    "type": "number"
+                },
+                "page_number": {
+                    "type": "number"
+                },
+                "page_size": {
+                    "type": "number"
+                },
+                "page_count": {
+                    "type": "number"
+                },
+                "continuation": {
+                    "type": "string"
+                },
+                "has_more_items": {
+                    "type": "boolean"
+                }
+            }
+        },
+        "events": {
+            "type": "array"
+        }
+    },
+    "meta": {
+        "folder": "EventSearches",
+        "filename": "getEventsSearch",
+        "resourceName": "List - deprecated",
+        "transition": "Search Events - deprecated",
+        "transitionResponseTypes": {
+            "200": "\\Eventbrite\\Model\\Collection\\Event"
+        },
+        "transaction": "httpTransaction",
+        "messageType": "httpResponse",
+        "resourceGroupName": "EventSearches",
+        "resourceGroup": "\\Eventbrite\\Resource\\EventSearches",
+        "transactionMethodName": "getEventsSearch",
+        "responseStatusCode": 200,
+        "responseType": "\\Eventbrite\\Model\\Collection\\Event"
+    }
+}

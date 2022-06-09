@@ -1,0 +1,40 @@
+{
+    "$schema": "http:\/\/json-schema.org\/draft-07\/schema#",
+    "type": "object",
+    "properties": {
+        "name": {
+            "type": "string"
+        },
+        "id": {
+            "type": "string"
+        },
+        "token": {
+            "type": "string"
+        },
+        "spots_left": {
+            "type": "number"
+        }
+    },
+    "required": [
+        "name",
+        "id",
+        "token",
+        "spots_left"
+    ],
+    "meta": {
+        "folder": "EventTeams",
+        "filename": "createEventTeamsCreate",
+        "resourceName": "Create",
+        "transition": "Create a Team",
+        "transitionResponseTypes": {
+            "200": "\\Eventbrite\\Model\\ModelBase"
+        },
+        "transaction": "httpTransaction",
+        "messageType": "httpResponse",
+        "resourceGroupName": "EventTeams",
+        "resourceGroup": "\\Eventbrite\\Resource\\EventTeams",
+        "transactionMethodName": "createEventTeamsCreate",
+        "responseStatusCode": 200,
+        "responseType": "\\Eventbrite\\Model\\ModelBase"
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "timezone": "America\/Los_Angeles",
+    "event_ids": [
+        "12345"
+    ],
+    "data": [
+        {
+            "date": "2017-02-19T20:28:14Z",
+            "topics": "``",
+            "date_localized": "2017-02-19T20:28:14Z",
+            "totals": {
+                "currency": "USD",
+                "gross": 0,
+                "net": 0,
+                "quantity": 1,
+                "fees": 0,
+                "royalty": 0
+            }
+        }
+    ]
+}

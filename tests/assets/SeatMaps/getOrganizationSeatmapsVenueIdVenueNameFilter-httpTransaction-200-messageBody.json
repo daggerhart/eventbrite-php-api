@@ -1,0 +1,11 @@
+{
+    "seatmaps": [
+        {
+            "name": "Tier 1",
+            "event_id": "5678",
+            "venue_id": "5678",
+            "capacity": 1,
+            "thumbnail_url": null
+        }
+    ]
+}

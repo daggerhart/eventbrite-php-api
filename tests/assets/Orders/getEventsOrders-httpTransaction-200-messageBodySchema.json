@@ -1,0 +1,48 @@
+{
+    "$schema": "http:\/\/json-schema.org\/draft-07\/schema#",
+    "type": "object",
+    "properties": {
+        "pagination": {
+            "type": "object",
+            "properties": {
+                "object_count": {
+                    "type": "number"
+                },
+                "page_number": {
+                    "type": "number"
+                },
+                "page_size": {
+                    "type": "number"
+                },
+                "page_count": {
+                    "type": "number"
+                },
+                "continuation": {
+                    "type": "string"
+                },
+                "has_more_items": {
+                    "type": "boolean"
+                }
+            }
+        },
+        "orders": {
+            "type": "array"
+        }
+    },
+    "meta": {
+        "folder": "Orders",
+        "filename": "getEventsOrders",
+        "resourceName": "List",
+        "transition": "List Orders by Event ID",
+        "transitionResponseTypes": {
+            "200": "\\Eventbrite\\Model\\Collection\\Order"
+        },
+        "transaction": "httpTransaction",
+        "messageType": "httpResponse",
+        "resourceGroupName": "Orders",
+        "resourceGroup": "\\Eventbrite\\Resource\\Orders",
+        "transactionMethodName": "getEventsOrders",
+        "responseStatusCode": 200,
+        "responseType": "\\Eventbrite\\Model\\Collection\\Order"
+    }
+}

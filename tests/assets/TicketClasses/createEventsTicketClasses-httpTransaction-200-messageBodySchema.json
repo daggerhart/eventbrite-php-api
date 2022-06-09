@@ -1,0 +1,440 @@
+{
+    "$schema": "http:\/\/json-schema.org\/draft-07\/schema#",
+    "type": "object",
+    "properties": {
+        "description": {
+            "anyOf": [
+                {
+                    "type": "null"
+                },
+                {
+                    "type": "string"
+                }
+            ]
+        },
+        "donation": {
+            "anyOf": [
+                {
+                    "type": "null"
+                },
+                {
+                    "type": "boolean"
+                }
+            ]
+        },
+        "free": {
+            "anyOf": [
+                {
+                    "type": "null"
+                },
+                {
+                    "type": "boolean"
+                }
+            ]
+        },
+        "minimum_quantity": {
+            "anyOf": [
+                {
+                    "type": "null"
+                },
+                {
+                    "type": "number"
+                }
+            ]
+        },
+        "maximum_quantity": {
+            "anyOf": [
+                {
+                    "type": "null"
+                },
+                {
+                    "type": "number"
+                }
+            ]
+        },
+        "delivery_methods": {
+            "anyOf": [
+                {
+                    "type": "null"
+                },
+                {
+                    "type": "array"
+                }
+            ]
+        },
+        "cost": {
+            "anyOf": [
+                {
+                    "type": "null"
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "actual_cost": {
+                            "type": "object",
+                            "properties": {
+                                "currency": {
+                                    "type": "string"
+                                },
+                                "value": {
+                                    "type": "number"
+                                },
+                                "major_value": {
+                                    "type": "string"
+                                },
+                                "display": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "currency",
+                                "value",
+                                "major_value",
+                                "display"
+                            ]
+                        },
+                        "actual_fee": {
+                            "type": "object",
+                            "properties": {
+                                "currency": {
+                                    "type": "string"
+                                },
+                                "value": {
+                                    "type": "number"
+                                },
+                                "major_value": {
+                                    "type": "string"
+                                },
+                                "display": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "currency",
+                                "value",
+                                "major_value",
+                                "display"
+                            ]
+                        },
+                        "cost": {
+                            "type": "object",
+                            "properties": {
+                                "currency": {
+                                    "type": "string"
+                                },
+                                "value": {
+                                    "type": "number"
+                                },
+                                "major_value": {
+                                    "type": "string"
+                                },
+                                "display": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "currency",
+                                "value",
+                                "major_value",
+                                "display"
+                            ]
+                        },
+                        "fee": {
+                            "type": "object",
+                            "properties": {
+                                "currency": {
+                                    "type": "string"
+                                },
+                                "value": {
+                                    "type": "number"
+                                },
+                                "major_value": {
+                                    "type": "string"
+                                },
+                                "display": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "currency",
+                                "value",
+                                "major_value",
+                                "display"
+                            ]
+                        },
+                        "tax": {
+                            "type": "object",
+                            "properties": {
+                                "currency": {
+                                    "type": "string"
+                                },
+                                "value": {
+                                    "type": "number"
+                                },
+                                "major_value": {
+                                    "type": "string"
+                                },
+                                "display": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "currency",
+                                "value",
+                                "major_value",
+                                "display"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        "resource_uri": {
+            "type": "string"
+        },
+        "image_id": {
+            "anyOf": [
+                {
+                    "type": "null"
+                },
+                {
+                    "type": "string"
+                }
+            ]
+        },
+        "name": {
+            "anyOf": [
+                {
+                    "type": "null"
+                },
+                {
+                    "type": "string"
+                }
+            ]
+        },
+        "display_name": {
+            "anyOf": [
+                {
+                    "type": "null"
+                },
+                {
+                    "type": "string"
+                }
+            ]
+        },
+        "sorting": {
+            "anyOf": [
+                {
+                    "type": "null"
+                },
+                {
+                    "type": "number"
+                }
+            ]
+        },
+        "capacity": {
+            "anyOf": [
+                {
+                    "type": "null"
+                },
+                {
+                    "type": "number"
+                }
+            ]
+        },
+        "quantity_total": {
+            "anyOf": [
+                {
+                    "type": "null"
+                },
+                {
+                    "type": "number"
+                }
+            ]
+        },
+        "quantity_sold": {
+            "anyOf": [
+                {
+                    "type": "null"
+                },
+                {
+                    "type": "number"
+                }
+            ]
+        },
+        "sales_start": {
+            "anyOf": [
+                {
+                    "type": "null"
+                },
+                {
+                    "type": "string"
+                }
+            ]
+        },
+        "sales_end": {
+            "anyOf": [
+                {
+                    "type": "null"
+                },
+                {
+                    "type": "string"
+                }
+            ]
+        },
+        "hidden": {
+            "anyOf": [
+                {
+                    "type": "null"
+                },
+                {
+                    "type": "boolean"
+                }
+            ]
+        },
+        "include_fee": {
+            "anyOf": [
+                {
+                    "type": "null"
+                },
+                {
+                    "type": "boolean"
+                }
+            ]
+        },
+        "split_fee": {
+            "anyOf": [
+                {
+                    "type": "null"
+                },
+                {
+                    "type": "boolean"
+                }
+            ]
+        },
+        "hide_description": {
+            "anyOf": [
+                {
+                    "type": "null"
+                },
+                {
+                    "type": "boolean"
+                }
+            ]
+        },
+        "hide_sale_dates": {
+            "anyOf": [
+                {
+                    "type": "null"
+                },
+                {
+                    "type": "boolean"
+                }
+            ]
+        },
+        "auto_hide": {
+            "anyOf": [
+                {
+                    "type": "null"
+                },
+                {
+                    "type": "boolean"
+                }
+            ]
+        },
+        "auto_hide_before": {
+            "anyOf": [
+                {
+                    "type": "null"
+                },
+                {
+                    "type": "string"
+                }
+            ]
+        },
+        "auto_hide_after": {
+            "anyOf": [
+                {
+                    "type": "null"
+                },
+                {
+                    "type": "string"
+                }
+            ]
+        },
+        "sales_start_after": {
+            "anyOf": [
+                {
+                    "type": "null"
+                },
+                {
+                    "type": "string"
+                }
+            ]
+        },
+        "order_confirmation_message": {
+            "anyOf": [
+                {
+                    "type": "null"
+                },
+                {
+                    "type": "string"
+                }
+            ]
+        },
+        "sales_channels": {
+            "anyOf": [
+                {
+                    "type": "null"
+                },
+                {
+                    "type": "array"
+                }
+            ]
+        },
+        "inventory_tier_id": {
+            "anyOf": [
+                {
+                    "type": "null"
+                },
+                {
+                    "type": "string"
+                }
+            ]
+        },
+        "secondary_assignment_enabled": {
+            "type": "boolean"
+        },
+        "category": {
+            "anyOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "enum": [
+                        "admission",
+                        "add_on",
+                        "donation"
+                    ]
+                }
+            ]
+        }
+    },
+    "meta": {
+        "folder": "TicketClasses",
+        "filename": "createEventsTicketClasses",
+        "resourceName": "Create",
+        "transition": "Create a Ticket Class",
+        "transitionResponseTypes": {
+            "200": "\\Eventbrite\\Model\\DataType\\TicketClassResponse",
+            "400": "\\Eventbrite\\Model\\DataType\\Error"
+        },
+        "transaction": "httpTransaction",
+        "messageType": "httpResponse",
+        "resourceGroupName": "TicketClasses",
+        "resourceGroup": "\\Eventbrite\\Resource\\TicketClasses",
+        "transactionMethodName": "createEventsTicketClasses",
+        "responseStatusCode": 200,
+        "responseType": "\\Eventbrite\\Model\\DataType\\TicketClassResponse"
+    }
+}

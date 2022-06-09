@@ -1,0 +1,42 @@
+{
+    "$schema": "http:\/\/json-schema.org\/draft-07\/schema#",
+    "type": "object",
+    "properties": {
+        "error_description": {
+            "type": "string"
+        },
+        "error_detail": {
+            "type": "object"
+        },
+        "status_code": {
+            "type": "number"
+        },
+        "error": {
+            "enum": [
+                "ARGUMENTS_ERROR",
+                "HAS_ATTENDEES",
+                "CAPACITY_TOTAL_TOO_SMALL",
+                "HOLD_QUANTITIES_EXCEEDS_REMAINING_CAPACITY"
+            ]
+        }
+    },
+    "meta": {
+        "folder": "EventCapacities",
+        "filename": "updateEventsCapacityTier",
+        "resourceName": "Update",
+        "transition": "Update a Capacity Tier",
+        "transitionResponseTypes": {
+            "200": "\\Eventbrite\\Model\\DataType\\CapacityTier",
+            "400": "\\Eventbrite\\Model\\DataType\\Error",
+            "403": "\\Eventbrite\\Model\\DataType\\Error",
+            "404": "\\Eventbrite\\Model\\DataType\\Error"
+        },
+        "transaction": "httpTransaction",
+        "messageType": "httpResponse",
+        "resourceGroupName": "EventCapacities",
+        "resourceGroup": "\\Eventbrite\\Resource\\EventCapacities",
+        "transactionMethodName": "updateEventsCapacityTier",
+        "responseStatusCode": 400,
+        "responseType": "\\Eventbrite\\Model\\DataType\\Error"
+    }
+}

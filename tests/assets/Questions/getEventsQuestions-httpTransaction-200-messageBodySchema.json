@@ -1,0 +1,87 @@
+{
+    "$schema": "http:\/\/json-schema.org\/draft-07\/schema#",
+    "type": "object",
+    "properties": {
+        "resource_uri": {
+            "type": "string"
+        },
+        "id": {
+            "type": "string"
+        },
+        "question": {
+            "type": "object",
+            "properties": {
+                "text": {
+                    "type": "string"
+                },
+                "html": {
+                    "type": "string"
+                }
+            }
+        },
+        "required": {
+            "type": "boolean"
+        },
+        "display_answer_on_order": {
+            "type": "boolean"
+        },
+        "type": {
+            "enum": [
+                "checkbox",
+                "dropdown",
+                "text",
+                "paragraph",
+                "radio",
+                "waiver"
+            ]
+        },
+        "respondent": {
+            "enum": [
+                "ticket_buyer",
+                "attendee"
+            ]
+        },
+        "waiver": {
+            "type": "string"
+        },
+        "choices": {
+            "type": "array"
+        },
+        "ticket_classes": {
+            "type": "array"
+        },
+        "parent_id": {
+            "type": "string"
+        },
+        "parent_choice_id": {
+            "type": "string"
+        },
+        "sorting": {
+            "anyOf": [
+                {
+                    "type": "null"
+                },
+                {
+                    "type": "number"
+                }
+            ]
+        }
+    },
+    "meta": {
+        "folder": "Questions",
+        "filename": "getEventsQuestions",
+        "resourceName": "Get Custom Question by Id",
+        "transition": "Get Custom Question by Id",
+        "transitionResponseTypes": {
+            "200": "\\Eventbrite\\Model\\DataType\\BaseQuestion",
+            "404": "\\Eventbrite\\Model\\ModelBase"
+        },
+        "transaction": "httpTransaction",
+        "messageType": "httpResponse",
+        "resourceGroupName": "Questions",
+        "resourceGroup": "\\Eventbrite\\Resource\\Questions",
+        "transactionMethodName": "getEventsQuestions",
+        "responseStatusCode": 200,
+        "responseType": "\\Eventbrite\\Model\\DataType\\BaseQuestion"
+    }
+}

@@ -1,0 +1,36 @@
+{
+    "$schema": "http:\/\/json-schema.org\/draft-07\/schema#",
+    "type": "object",
+    "properties": {
+        "pagination": {
+            "type": "object",
+            "properties": {
+                "continuation": {
+                    "type": "string"
+                },
+                "has_more_items": {
+                    "type": "boolean"
+                }
+            }
+        },
+        "roles": {
+            "type": "array"
+        }
+    },
+    "meta": {
+        "folder": "OrganizationRoles",
+        "filename": "getOrganizationRoles",
+        "resourceName": "List",
+        "transition": "List Roles by Organization",
+        "transitionResponseTypes": {
+            "200": "\\Eventbrite\\Model\\Collection\\Role"
+        },
+        "transaction": "httpTransaction",
+        "messageType": "httpResponse",
+        "resourceGroupName": "OrganizationRoles",
+        "resourceGroup": "\\Eventbrite\\Resource\\OrganizationRoles",
+        "transactionMethodName": "getOrganizationRoles",
+        "responseStatusCode": 200,
+        "responseType": "\\Eventbrite\\Model\\Collection\\Role"
+    }
+}

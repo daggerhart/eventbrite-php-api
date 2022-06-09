@@ -1,0 +1,62 @@
+{
+    "$schema": "http:\/\/json-schema.org\/draft-07\/schema#",
+    "type": "object",
+    "properties": {
+        "subcategory": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "string"
+                },
+                "resource_uri": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "parent_category": {
+                    "type": "object",
+                    "properties": {
+                        "id": {
+                            "type": "string"
+                        },
+                        "resource_uri": {
+                            "type": "string"
+                        },
+                        "name": {
+                            "type": "string"
+                        },
+                        "name_localized": {
+                            "type": "string"
+                        },
+                        "short_name": {
+                            "type": "string"
+                        },
+                        "short_name_localized": {
+                            "type": "string"
+                        },
+                        "subcategories": {
+                            "type": "array"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "meta": {
+        "folder": "Categories",
+        "filename": "getSubcategory",
+        "resourceName": "Retrieve",
+        "transition": "Subcategory by ID",
+        "transitionResponseTypes": {
+            "200": "\\Eventbrite\\Model\\ModelBase"
+        },
+        "transaction": "httpTransaction",
+        "messageType": "httpResponse",
+        "resourceGroupName": "Categories",
+        "resourceGroup": "\\Eventbrite\\Resource\\Categories",
+        "transactionMethodName": "getSubcategory",
+        "responseStatusCode": 200,
+        "responseType": "\\Eventbrite\\Model\\ModelBase"
+    }
+}

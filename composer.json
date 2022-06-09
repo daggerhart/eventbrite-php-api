@@ -1,0 +1,22 @@
+{
+    "name": "daggerhart/eventbrite-php-api",
+    "autoload": {
+        "psr-4": {
+            "Eventbrite\\": "src/"
+        }
+    },
+    "require": {
+        "ext-json": "*",
+        "guzzlehttp/guzzle": "^7",
+        "ramsey/collection": "^1.2",
+        "myclabs/php-enum": "^1.8"
+    },
+    "scripts": {
+        "tests": "phpunit tests"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9",
+        "symfony/var-dumper": "^5",
+        "vlucas/phpdotenv": "^5.4"
+    }
+}

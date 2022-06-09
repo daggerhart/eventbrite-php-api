@@ -1,0 +1,55 @@
+{
+    "$schema": "http:\/\/json-schema.org\/draft-07\/schema#",
+    "type": "object",
+    "properties": {
+        "show_start_date": {
+            "type": "boolean"
+        },
+        "show_end_date": {
+            "type": "boolean"
+        },
+        "show_start_end_time": {
+            "type": "boolean"
+        },
+        "show_timezone": {
+            "type": "boolean"
+        },
+        "show_map": {
+            "type": "boolean"
+        },
+        "show_remaining": {
+            "type": "boolean"
+        },
+        "show_organizer_facebook": {
+            "type": "boolean"
+        },
+        "show_organizer_twitter": {
+            "type": "boolean"
+        },
+        "show_facebook_friends_going": {
+            "type": "boolean"
+        },
+        "terminology": {
+            "enum": [
+                "tickets_vertical",
+                "endurance_vertical"
+            ]
+        }
+    },
+    "meta": {
+        "folder": "DisplaySettings",
+        "filename": "updateEventsDisplaySettings",
+        "resourceName": "Update",
+        "transition": "Update Display Settings",
+        "transitionResponseTypes": {
+            "200": "\\Eventbrite\\Model\\DataType\\DisplaySettings"
+        },
+        "transaction": "httpTransaction",
+        "messageType": "httpResponse",
+        "resourceGroupName": "DisplaySettings",
+        "resourceGroup": "\\Eventbrite\\Resource\\DisplaySettings",
+        "transactionMethodName": "updateEventsDisplaySettings",
+        "responseStatusCode": 200,
+        "responseType": "\\Eventbrite\\Model\\DataType\\DisplaySettings"
+    }
+}

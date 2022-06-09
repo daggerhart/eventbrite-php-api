@@ -1,0 +1,6 @@
+{
+    "text_code": "tickets_not_yet_on_sale",
+    "message": "Tickets will be online soon",
+    "default_message": "Sales Ended",
+    "message_type": "default"
+}

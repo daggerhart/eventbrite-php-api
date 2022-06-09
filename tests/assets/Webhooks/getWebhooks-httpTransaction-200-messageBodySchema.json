@@ -1,0 +1,75 @@
+{
+    "$schema": "http:\/\/json-schema.org\/draft-07\/schema#",
+    "type": "object",
+    "properties": {
+        "pagination": {
+            "type": "object",
+            "properties": {
+                "object_count": {
+                    "type": "number"
+                },
+                "page_number": {
+                    "type": "number"
+                },
+                "page_size": {
+                    "type": "number"
+                },
+                "page_count": {
+                    "type": "number"
+                },
+                "continuation": {
+                    "type": "string"
+                },
+                "has_more_items": {
+                    "type": "boolean"
+                }
+            }
+        },
+        "webhooks": {
+            "type": "object",
+            "properties": {
+                "endpoint_url": {
+                    "type": "string"
+                },
+                "actions": {
+                    "type": "array"
+                },
+                "event_id": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "string"
+                },
+                "resource_uri": {
+                    "type": "string"
+                },
+                "created": {
+                    "type": "string"
+                },
+                "user_id": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "endpoint_url"
+            ]
+        }
+    },
+    "meta": {
+        "folder": "Webhooks",
+        "filename": "getWebhooks",
+        "resourceName": "List",
+        "transition": "List of Webhooks - deprecation",
+        "transitionResponseTypes": {
+            "200": "\\Eventbrite\\Model\\ModelBase",
+            "400": "\\Eventbrite\\Model\\DataType\\Error"
+        },
+        "transaction": "httpTransaction",
+        "messageType": "httpResponse",
+        "resourceGroupName": "Webhooks",
+        "resourceGroup": "\\Eventbrite\\Resource\\Webhooks",
+        "transactionMethodName": "getWebhooks",
+        "responseStatusCode": 200,
+        "responseType": "\\Eventbrite\\Model\\ModelBase"
+    }
+}

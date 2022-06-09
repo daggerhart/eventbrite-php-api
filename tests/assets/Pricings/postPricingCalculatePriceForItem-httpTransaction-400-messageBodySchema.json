@@ -1,0 +1,40 @@
+{
+    "$schema": "http:\/\/json-schema.org\/draft-07\/schema#",
+    "type": "object",
+    "properties": {
+        "error_description": {
+            "type": "string"
+        },
+        "error_detail": {
+            "type": "object"
+        },
+        "status_code": {
+            "type": "number"
+        },
+        "error": {
+            "enum": [
+                "PRICING_MODEL_NOT_SUPPORTED",
+                "INVALID_CURRENCY_COUNTRY_COMBINATION",
+                "BASE_PRICE_TOO_LOW_TO_ABSORB",
+                "ARGUMENTS_ERROR"
+            ]
+        }
+    },
+    "meta": {
+        "folder": "Pricings",
+        "filename": "postPricingCalculatePriceForItem",
+        "resourceName": "Items",
+        "transition": "Calculate Items",
+        "transitionResponseTypes": {
+            "200": "\\Eventbrite\\Model\\ModelBase",
+            "400": "\\Eventbrite\\Model\\DataType\\Error"
+        },
+        "transaction": "httpTransaction",
+        "messageType": "httpResponse",
+        "resourceGroupName": "Pricings",
+        "resourceGroup": "\\Eventbrite\\Resource\\Pricings",
+        "transactionMethodName": "postPricingCalculatePriceForItem",
+        "responseStatusCode": 400,
+        "responseType": "\\Eventbrite\\Model\\DataType\\Error"
+    }
+}

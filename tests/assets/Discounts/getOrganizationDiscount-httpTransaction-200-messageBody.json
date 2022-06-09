@@ -1,0 +1,23 @@
+{
+    "discounts": [
+        {
+            "type": "access",
+            "code": "abcde",
+            "amount_off": "10",
+            "percent_off": "20",
+            "event_id": "12345",
+            "ticket_class_ids": [],
+            "quantity_available": 5,
+            "start_date": "",
+            "start_date_relative": 0,
+            "end_date": "",
+            "end_date_relative": 0,
+            "ticket_group_id": "12345",
+            "hold_ids": [
+                "H1234"
+            ],
+            "id": "12345",
+            "quantity_sold": 5
+        }
+    ]
+}

@@ -1,0 +1,52 @@
+{
+    "$schema": "http:\/\/json-schema.org\/draft-07\/schema#",
+    "type": "object",
+    "properties": {
+        "name": {
+            "anyOf": [
+                {
+                    "type": "null"
+                },
+                {
+                    "type": "string"
+                }
+            ]
+        },
+        "event_id": {
+            "type": "string"
+        },
+        "venue_id": {
+            "type": "string"
+        },
+        "capacity": {
+            "type": "number"
+        },
+        "thumbnail_url": {
+            "anyOf": [
+                {
+                    "type": "null"
+                },
+                {
+                    "type": "string"
+                }
+            ]
+        }
+    },
+    "meta": {
+        "folder": "SeatMaps",
+        "filename": "createEventsSeatmaps",
+        "resourceName": "Create Seat Map For Event",
+        "transition": "Create Seat Map For Event",
+        "transitionResponseTypes": {
+            "200": "\\Eventbrite\\Model\\DataType\\SeatMap",
+            "403": "\\Eventbrite\\Model\\DataType\\Error"
+        },
+        "transaction": "httpTransaction",
+        "messageType": "httpResponse",
+        "resourceGroupName": "SeatMaps",
+        "resourceGroup": "\\Eventbrite\\Resource\\SeatMaps",
+        "transactionMethodName": "createEventsSeatmaps",
+        "responseStatusCode": 200,
+        "responseType": "\\Eventbrite\\Model\\DataType\\SeatMap"
+    }
+}

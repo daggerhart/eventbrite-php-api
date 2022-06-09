@@ -1,0 +1,26 @@
+{
+    "confirmation_message": {
+        "html": "<H1>Confirmation Message<\/H1>",
+        "text": "Confirmation Message"
+    },
+    "instructions": {
+        "html": "<H1>Instructions<\/H1>",
+        "text": "Instructions"
+    },
+    "event_id": "43253626762",
+    "refund_request_enabled": true,
+    "redirect_url": null,
+    "sales_ended_message": {
+        "html": "<H1>Sales Ended Message<\/H1>",
+        "text": "Sales Ended Message"
+    },
+    "allow_attendee_update": true,
+    "survey_name": "Registration Page",
+    "survey_info": {
+        "html": "<b>Filling in this survey is required to attend the event<\/b>",
+        "text": "Filling in this survey is required to attend the event"
+    },
+    "survey_time_limit": 15,
+    "survey_respondent": "ticket_buyer",
+    "survey_ticket_classes": []
+}

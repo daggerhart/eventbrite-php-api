@@ -1,0 +1,28 @@
+{
+    "$schema": "http:\/\/json-schema.org\/draft-07\/schema#",
+    "type": "object",
+    "properties": {
+        "type": {
+            "type": "array"
+        }
+    },
+    "required": [
+        "type"
+    ],
+    "meta": {
+        "folder": "Media",
+        "filename": "getMediaUpload",
+        "resourceName": "Retrieve Upload",
+        "transition": "Retrieve a Media Upload",
+        "transitionResponseTypes": {
+            "200": "\\Eventbrite\\Model\\DataType\\MediaUpload"
+        },
+        "transaction": "httpTransaction",
+        "messageType": "httpResponse",
+        "resourceGroupName": "Media",
+        "resourceGroup": "\\Eventbrite\\Resource\\Media",
+        "transactionMethodName": "getMediaUpload",
+        "responseStatusCode": 200,
+        "responseType": "\\Eventbrite\\Model\\DataType\\MediaUpload"
+    }
+}

@@ -1,0 +1,83 @@
+{
+    "$schema": "http:\/\/json-schema.org\/draft-07\/schema#",
+    "type": "object",
+    "properties": {
+        "text_code": {
+            "anyOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "enum": [
+                        "tickets_not_yet_on_sale",
+                        "tickets_with_sales_ended",
+                        "tickets_sold_out",
+                        "tickets_unavailable",
+                        "tickets_at_the_door",
+                        "event_cancelled",
+                        "event_postponed",
+                        "checkout_title_tickets",
+                        "checkout_title_add_ons",
+                        "checkout_title_donations"
+                    ]
+                }
+            ]
+        },
+        "message": {
+            "type": "string"
+        },
+        "message_code": {
+            "anyOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "enum": [
+                        "tickets_not_yet_on_sale",
+                        "tickets_with_sales_ended",
+                        "tickets_sold_out",
+                        "tickets_unavailable",
+                        "tickets_at_the_door",
+                        "event_cancelled",
+                        "event_postponed",
+                        "checkout_title_tickets",
+                        "checkout_title_add_ons",
+                        "checkout_title_donations"
+                    ]
+                }
+            ]
+        },
+        "default_message": {
+            "type": "string"
+        },
+        "message_type": {
+            "enum": [
+                "default",
+                "canonical",
+                "custom"
+            ]
+        }
+    },
+    "required": [
+        "text_code",
+        "default_message",
+        "message_type"
+    ],
+    "meta": {
+        "folder": "TextsOverrides",
+        "filename": "createOrganizationsTextOverrides",
+        "resourceName": "Create Text Overrides",
+        "transition": "Create Text Overrides",
+        "transitionResponseTypes": {
+            "200": "\\Eventbrite\\Model\\DataType\\TextOverridesResponseContent",
+            "400": "\\Eventbrite\\Model\\DataType\\Error"
+        },
+        "transaction": "httpTransaction",
+        "messageType": "httpResponse",
+        "resourceGroupName": "TextsOverrides",
+        "resourceGroup": "\\Eventbrite\\Resource\\TextsOverrides",
+        "transactionMethodName": "createOrganizationsTextOverrides",
+        "responseStatusCode": 200,
+        "responseType": "\\Eventbrite\\Model\\DataType\\TextOverridesResponseContent"
+    }
+}

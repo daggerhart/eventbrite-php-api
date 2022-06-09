@@ -1,0 +1,42 @@
+{
+    "$schema": "http:\/\/json-schema.org\/draft-07\/schema#",
+    "type": "object",
+    "properties": {
+        "error_description": {
+            "type": "string"
+        },
+        "error_detail": {
+            "type": "object"
+        },
+        "status_code": {
+            "type": "number"
+        },
+        "error": {
+            "anyOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "const": "ORDER_EXPIRED"
+                }
+            ]
+        }
+    },
+    "meta": {
+        "folder": "Orders",
+        "filename": "getOrder",
+        "resourceName": "\u00a0Retrieve",
+        "transition": "Retrieve Order by ID",
+        "transitionResponseTypes": {
+            "200": "\\Eventbrite\\Model\\DataType\\Order",
+            "400": "\\Eventbrite\\Model\\DataType\\Error"
+        },
+        "transaction": "httpTransaction",
+        "messageType": "httpResponse",
+        "resourceGroupName": "Orders",
+        "resourceGroup": "\\Eventbrite\\Resource\\Orders",
+        "transactionMethodName": "getOrder",
+        "responseStatusCode": 400,
+        "responseType": "\\Eventbrite\\Model\\DataType\\Error"
+    }
+}

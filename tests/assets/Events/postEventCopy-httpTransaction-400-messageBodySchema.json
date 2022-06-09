@@ -1,0 +1,48 @@
+{
+    "$schema": "http:\/\/json-schema.org\/draft-07\/schema#",
+    "type": "object",
+    "properties": {
+        "error_description": {
+            "type": "string"
+        },
+        "error_detail": {
+            "type": "object"
+        },
+        "status_code": {
+            "type": "number"
+        },
+        "error": {
+            "anyOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "enum": [
+                        "INSUFFICIENT_PACKAGE",
+                        "INVALID_END_DATE",
+                        "INVALID_START_DATE",
+                        "UNABLE_TO_COPY_EVENT",
+                        "UNSUPPORTED_TIMEZONE"
+                    ]
+                }
+            ]
+        }
+    },
+    "meta": {
+        "folder": "Events",
+        "filename": "postEventCopy",
+        "resourceName": "Copy",
+        "transition": "Copy an Event",
+        "transitionResponseTypes": {
+            "200": "\\Eventbrite\\Model\\DataType\\Event",
+            "400": "\\Eventbrite\\Model\\DataType\\Error"
+        },
+        "transaction": "httpTransaction",
+        "messageType": "httpResponse",
+        "resourceGroupName": "Events",
+        "resourceGroup": "\\Eventbrite\\Resource\\Events",
+        "transactionMethodName": "postEventCopy",
+        "responseStatusCode": 400,
+        "responseType": "\\Eventbrite\\Model\\DataType\\Error"
+    }
+}

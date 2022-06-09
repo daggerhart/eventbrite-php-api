@@ -1,0 +1,103 @@
+{
+    "$schema": "http:\/\/json-schema.org\/draft-07\/schema#",
+    "type": "object",
+    "properties": {
+        "confirmation_message": {
+            "type": "object",
+            "properties": {
+                "html": {
+                    "type": "string"
+                },
+                "text": {
+                    "type": "string"
+                }
+            }
+        },
+        "instructions": {
+            "type": "object",
+            "properties": {
+                "html": {
+                    "type": "string"
+                },
+                "text": {
+                    "type": "string"
+                }
+            }
+        },
+        "event_id": {
+            "type": "string"
+        },
+        "refund_request_enabled": {
+            "type": "boolean"
+        },
+        "redirect_url": {
+            "anyOf": [
+                {
+                    "type": "null"
+                },
+                {
+                    "type": "string"
+                }
+            ]
+        },
+        "sales_ended_message": {
+            "type": "object",
+            "properties": {
+                "html": {
+                    "type": "string"
+                },
+                "text": {
+                    "type": "string"
+                }
+            }
+        },
+        "allow_attendee_update": {
+            "type": "boolean"
+        },
+        "survey_name": {
+            "type": "string"
+        },
+        "survey_info": {
+            "type": "object",
+            "properties": {
+                "html": {
+                    "type": "string"
+                },
+                "text": {
+                    "type": "string"
+                }
+            }
+        },
+        "survey_time_limit": {
+            "type": "number"
+        },
+        "survey_respondent": {
+            "enum": [
+                "ticket_buyer",
+                "attendee"
+            ]
+        },
+        "survey_ticket_classes": {
+            "type": "array"
+        }
+    },
+    "meta": {
+        "folder": "TicketBuyerSettings",
+        "filename": "updateEventsTicketBuyerSetting",
+        "resourceName": "Update",
+        "transition": "Update Ticket Buyer Settings for an Event",
+        "transitionResponseTypes": {
+            "200": "\\Eventbrite\\Model\\DataType\\TicketBuyerSettings",
+            "400": "\\Eventbrite\\Model\\DataType\\Error",
+            "403": "\\Eventbrite\\Model\\DataType\\Error",
+            "404": "\\Eventbrite\\Model\\DataType\\Error"
+        },
+        "transaction": "httpTransaction",
+        "messageType": "httpResponse",
+        "resourceGroupName": "TicketBuyerSettings",
+        "resourceGroup": "\\Eventbrite\\Resource\\TicketBuyerSettings",
+        "transactionMethodName": "updateEventsTicketBuyerSetting",
+        "responseStatusCode": 200,
+        "responseType": "\\Eventbrite\\Model\\DataType\\TicketBuyerSettings"
+    }
+}

@@ -1,0 +1,1027 @@
+{
+    "$schema": "http:\/\/json-schema.org\/draft-07\/schema#",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "string"
+        },
+        "name": {
+            "type": "object",
+            "properties": {
+                "text": {
+                    "type": "string"
+                },
+                "html": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "text",
+                "html"
+            ]
+        },
+        "summary": {
+            "type": "string"
+        },
+        "description": {
+            "type": "object",
+            "properties": {
+                "text": {
+                    "type": "string"
+                },
+                "html": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "text",
+                "html"
+            ]
+        },
+        "start": {
+            "type": "object",
+            "properties": {
+                "timezone": {
+                    "type": "string"
+                },
+                "utc": {
+                    "type": "string"
+                },
+                "local": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "timezone",
+                "utc",
+                "local"
+            ]
+        },
+        "end": {
+            "type": "object",
+            "properties": {
+                "timezone": {
+                    "type": "string"
+                },
+                "utc": {
+                    "type": "string"
+                },
+                "local": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "timezone",
+                "utc",
+                "local"
+            ]
+        },
+        "url": {
+            "type": "string"
+        },
+        "vanity_url": {
+            "type": "string"
+        },
+        "created": {
+            "type": "string"
+        },
+        "changed": {
+            "type": "string"
+        },
+        "published": {
+            "anyOf": [
+                {
+                    "type": "null"
+                },
+                {
+                    "type": "string"
+                }
+            ]
+        },
+        "status": {
+            "enum": [
+                "draft",
+                "live",
+                "started",
+                "ended",
+                "completed",
+                "canceled"
+            ]
+        },
+        "currency": {
+            "type": "string"
+        },
+        "online_event": {
+            "type": "boolean"
+        },
+        "organization_id": {
+            "type": "string"
+        },
+        "organizer_id": {
+            "type": "string"
+        },
+        "organizer": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "object",
+                    "properties": {
+                        "text": {
+                            "type": "string"
+                        },
+                        "html": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "text",
+                        "html"
+                    ]
+                },
+                "long_description": {
+                    "type": "object",
+                    "properties": {
+                        "text": {
+                            "type": "string"
+                        },
+                        "html": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "text",
+                        "html"
+                    ]
+                },
+                "logo_id": {
+                    "anyOf": [
+                        {
+                            "type": "null"
+                        },
+                        {
+                            "type": "string"
+                        }
+                    ]
+                },
+                "logo": {
+                    "anyOf": [
+                        {
+                            "type": "null"
+                        },
+                        {
+                            "type": "object",
+                            "properties": {
+                                "id": {
+                                    "type": "string"
+                                },
+                                "url": {
+                                    "type": "string"
+                                },
+                                "crop_mask": {
+                                    "anyOf": [
+                                        {
+                                            "type": "null"
+                                        },
+                                        {
+                                            "type": "object",
+                                            "properties": {
+                                                "top_left": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "y": {
+                                                            "type": "number"
+                                                        },
+                                                        "x": {
+                                                            "type": "number"
+                                                        }
+                                                    }
+                                                },
+                                                "width": {
+                                                    "type": "number"
+                                                },
+                                                "height": {
+                                                    "type": "number"
+                                                }
+                                            }
+                                        }
+                                    ]
+                                },
+                                "original": {
+                                    "type": "object",
+                                    "properties": {
+                                        "url": {
+                                            "type": "string"
+                                        },
+                                        "width": {
+                                            "type": "number"
+                                        },
+                                        "height": {
+                                            "type": "number"
+                                        }
+                                    }
+                                },
+                                "aspect_ratio": {
+                                    "type": "string"
+                                },
+                                "edge_color": {
+                                    "type": "string"
+                                },
+                                "edge_color_set": {
+                                    "type": "boolean"
+                                }
+                            },
+                            "required": [
+                                "id",
+                                "url"
+                            ]
+                        }
+                    ]
+                },
+                "resource_uri": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "string"
+                },
+                "url": {
+                    "type": "string"
+                },
+                "num_past_events": {
+                    "type": "number"
+                },
+                "num_future_events": {
+                    "type": "number"
+                },
+                "twitter": {
+                    "type": "string"
+                },
+                "facebook": {
+                    "type": "string"
+                }
+            }
+        },
+        "logo_id": {
+            "anyOf": [
+                {
+                    "type": "null"
+                },
+                {
+                    "type": "string"
+                }
+            ]
+        },
+        "logo": {
+            "anyOf": [
+                {
+                    "type": "null"
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "id": {
+                            "type": "string"
+                        },
+                        "url": {
+                            "type": "string"
+                        },
+                        "crop_mask": {
+                            "anyOf": [
+                                {
+                                    "type": "null"
+                                },
+                                {
+                                    "type": "object",
+                                    "properties": {
+                                        "top_left": {
+                                            "type": "object",
+                                            "properties": {
+                                                "y": {
+                                                    "type": "number"
+                                                },
+                                                "x": {
+                                                    "type": "number"
+                                                }
+                                            }
+                                        },
+                                        "width": {
+                                            "type": "number"
+                                        },
+                                        "height": {
+                                            "type": "number"
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        "original": {
+                            "type": "object",
+                            "properties": {
+                                "url": {
+                                    "type": "string"
+                                },
+                                "width": {
+                                    "type": "number"
+                                },
+                                "height": {
+                                    "type": "number"
+                                }
+                            }
+                        },
+                        "aspect_ratio": {
+                            "type": "string"
+                        },
+                        "edge_color": {
+                            "type": "string"
+                        },
+                        "edge_color_set": {
+                            "type": "boolean"
+                        }
+                    },
+                    "required": [
+                        "id",
+                        "url"
+                    ]
+                }
+            ]
+        },
+        "venue_id": {
+            "type": "string"
+        },
+        "venue": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "age_restriction": {
+                    "anyOf": [
+                        {
+                            "type": "null"
+                        },
+                        {
+                            "type": "string"
+                        }
+                    ]
+                },
+                "capacity": {
+                    "anyOf": [
+                        {
+                            "type": "null"
+                        },
+                        {
+                            "type": "number"
+                        }
+                    ]
+                },
+                "address": {
+                    "anyOf": [
+                        {
+                            "type": "null"
+                        },
+                        {
+                            "type": "object",
+                            "properties": {
+                                "address_1": {
+                                    "anyOf": [
+                                        {
+                                            "type": "null"
+                                        },
+                                        {
+                                            "type": "string"
+                                        }
+                                    ]
+                                },
+                                "address_2": {
+                                    "anyOf": [
+                                        {
+                                            "type": "null"
+                                        },
+                                        {
+                                            "type": "string"
+                                        }
+                                    ]
+                                },
+                                "city": {
+                                    "anyOf": [
+                                        {
+                                            "type": "null"
+                                        },
+                                        {
+                                            "type": "string"
+                                        }
+                                    ]
+                                },
+                                "region": {
+                                    "anyOf": [
+                                        {
+                                            "type": "null"
+                                        },
+                                        {
+                                            "type": "string"
+                                        }
+                                    ]
+                                },
+                                "postal_code": {
+                                    "anyOf": [
+                                        {
+                                            "type": "null"
+                                        },
+                                        {
+                                            "type": "string"
+                                        }
+                                    ]
+                                },
+                                "country": {
+                                    "anyOf": [
+                                        {
+                                            "type": "null"
+                                        },
+                                        {
+                                            "type": "string"
+                                        }
+                                    ]
+                                },
+                                "latitude": {
+                                    "anyOf": [
+                                        {
+                                            "type": "null"
+                                        },
+                                        {
+                                            "type": "string"
+                                        }
+                                    ]
+                                },
+                                "longitude": {
+                                    "anyOf": [
+                                        {
+                                            "type": "null"
+                                        },
+                                        {
+                                            "type": "string"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    ]
+                },
+                "resource_uri": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "string"
+                },
+                "latitude": {
+                    "type": "string"
+                },
+                "longitude": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "name"
+            ]
+        },
+        "format_id": {
+            "anyOf": [
+                {
+                    "type": "null"
+                },
+                {
+                    "type": "string"
+                }
+            ]
+        },
+        "format": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "name_localized": {
+                    "type": "string"
+                },
+                "short_name": {
+                    "type": "string"
+                },
+                "short_name_localized": {
+                    "type": "string"
+                },
+                "resource_uri": {
+                    "type": "string"
+                }
+            }
+        },
+        "category_id": {
+            "anyOf": [
+                {
+                    "type": "null"
+                },
+                {
+                    "type": "string"
+                }
+            ]
+        },
+        "category": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "string"
+                },
+                "resource_uri": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "name_localized": {
+                    "type": "string"
+                },
+                "short_name": {
+                    "type": "string"
+                },
+                "short_name_localized": {
+                    "type": "string"
+                },
+                "subcategories": {
+                    "type": "array"
+                }
+            }
+        },
+        "subcategory_id": {
+            "anyOf": [
+                {
+                    "type": "null"
+                },
+                {
+                    "type": "string"
+                }
+            ]
+        },
+        "subcategory": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "string"
+                },
+                "resource_uri": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "parent_category": {
+                    "type": "object",
+                    "properties": {
+                        "id": {
+                            "type": "string"
+                        },
+                        "resource_uri": {
+                            "type": "string"
+                        },
+                        "name": {
+                            "type": "string"
+                        },
+                        "name_localized": {
+                            "type": "string"
+                        },
+                        "short_name": {
+                            "type": "string"
+                        },
+                        "short_name_localized": {
+                            "type": "string"
+                        },
+                        "subcategories": {
+                            "type": "array"
+                        }
+                    }
+                }
+            }
+        },
+        "music_properties": {
+            "type": "object",
+            "properties": {
+                "age_restriction": {
+                    "anyOf": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "enum": [
+                                null,
+                                "all_ages",
+                                "12+",
+                                "13+",
+                                "14+",
+                                "15+",
+                                "16+",
+                                "17+",
+                                "18+",
+                                "19+",
+                                "21+",
+                                "under_14_with_guardian",
+                                "under_16_with_guardian",
+                                "under_18_with_guardian",
+                                "under_21_with_guardian"
+                            ]
+                        }
+                    ]
+                },
+                "presented_by": {
+                    "anyOf": [
+                        {
+                            "type": "null"
+                        },
+                        {
+                            "type": "string"
+                        }
+                    ]
+                },
+                "door_time": {
+                    "anyOf": [
+                        {
+                            "type": "null"
+                        },
+                        {
+                            "type": "string"
+                        }
+                    ]
+                }
+            }
+        },
+        "bookmark_info": {
+            "type": "object",
+            "properties": {
+                "bookmarked": {
+                    "type": "boolean"
+                }
+            }
+        },
+        "refund_policy": {
+            "type": "string"
+        },
+        "ticket_availability": {
+            "type": "object",
+            "properties": {
+                "has_available_tickets": {
+                    "type": "boolean"
+                },
+                "minimum_ticket_price": {
+                    "type": "object",
+                    "properties": {
+                        "currency": {
+                            "type": "string"
+                        },
+                        "value": {
+                            "type": "number"
+                        },
+                        "major_value": {
+                            "type": "string"
+                        },
+                        "display": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "currency",
+                        "value",
+                        "major_value",
+                        "display"
+                    ]
+                },
+                "maximum_ticket_price": {
+                    "type": "object",
+                    "properties": {
+                        "currency": {
+                            "type": "string"
+                        },
+                        "value": {
+                            "type": "number"
+                        },
+                        "major_value": {
+                            "type": "string"
+                        },
+                        "display": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "currency",
+                        "value",
+                        "major_value",
+                        "display"
+                    ]
+                },
+                "is_sold_out": {
+                    "type": "boolean"
+                },
+                "start_sales_date": {
+                    "type": "object",
+                    "properties": {
+                        "timezone": {
+                            "type": "string"
+                        },
+                        "utc": {
+                            "type": "string"
+                        },
+                        "local": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "timezone",
+                        "utc",
+                        "local"
+                    ]
+                },
+                "waitlist_available": {
+                    "type": "boolean"
+                }
+            }
+        },
+        "listed": {
+            "type": "boolean"
+        },
+        "shareable": {
+            "type": "boolean"
+        },
+        "invite_only": {
+            "type": "boolean"
+        },
+        "show_remaining": {
+            "type": "boolean"
+        },
+        "password": {
+            "type": "string"
+        },
+        "capacity": {
+            "type": "number"
+        },
+        "capacity_is_custom": {
+            "type": "boolean"
+        },
+        "tx_time_limit": {
+            "type": "string"
+        },
+        "hide_start_date": {
+            "type": "boolean"
+        },
+        "hide_end_date": {
+            "type": "boolean"
+        },
+        "locale": {
+            "type": "string"
+        },
+        "is_locked": {
+            "type": "boolean"
+        },
+        "privacy_setting": {
+            "type": "string"
+        },
+        "is_externally_ticketed": {
+            "type": "boolean"
+        },
+        "external_ticketing": {
+            "type": "object",
+            "properties": {
+                "external_url": {
+                    "type": "string"
+                },
+                "ticketing_provider_name": {
+                    "type": "string"
+                },
+                "is_free": {
+                    "type": "boolean"
+                },
+                "minimum_ticket_price": {
+                    "type": "object",
+                    "properties": {
+                        "currency": {
+                            "type": "string"
+                        },
+                        "value": {
+                            "type": "number"
+                        },
+                        "major_value": {
+                            "type": "string"
+                        },
+                        "display": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "currency",
+                        "value",
+                        "major_value",
+                        "display"
+                    ]
+                },
+                "maximum_ticket_price": {
+                    "type": "object",
+                    "properties": {
+                        "currency": {
+                            "type": "string"
+                        },
+                        "value": {
+                            "type": "number"
+                        },
+                        "major_value": {
+                            "type": "string"
+                        },
+                        "display": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "currency",
+                        "value",
+                        "major_value",
+                        "display"
+                    ]
+                },
+                "sales_start": {
+                    "type": "string"
+                },
+                "sales_end": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "external_url",
+                "ticketing_provider_name",
+                "is_free",
+                "minimum_ticket_price",
+                "maximum_ticket_price",
+                "sales_start",
+                "sales_end"
+            ]
+        },
+        "is_series": {
+            "type": "boolean"
+        },
+        "is_series_parent": {
+            "type": "boolean"
+        },
+        "series_id": {
+            "anyOf": [
+                {
+                    "type": "null"
+                },
+                {
+                    "type": "string"
+                }
+            ]
+        },
+        "is_reserved_seating": {
+            "type": "boolean"
+        },
+        "show_pick_a_seat": {
+            "type": "boolean"
+        },
+        "show_seatmap_thumbnail": {
+            "type": "boolean"
+        },
+        "show_colors_in_seatmap_thumbnail": {
+            "type": "boolean"
+        },
+        "is_free": {
+            "type": "boolean"
+        },
+        "source": {
+            "type": "string"
+        },
+        "version": {
+            "type": "string"
+        },
+        "resource_uri": {
+            "type": "string"
+        },
+        "event_sales_status": {
+            "type": "object",
+            "properties": {
+                "sales_status": {
+                    "enum": [
+                        "text",
+                        "on_sale",
+                        "not_yet_on_sale",
+                        "sales_ended",
+                        "sold_out",
+                        "unavailable"
+                    ]
+                },
+                "start_sales_date": {
+                    "type": "object",
+                    "properties": {
+                        "timezone": {
+                            "type": "string"
+                        },
+                        "utc": {
+                            "type": "string"
+                        },
+                        "local": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "timezone",
+                        "utc",
+                        "local"
+                    ]
+                },
+                "message": {
+                    "type": "string"
+                },
+                "message_type": {
+                    "anyOf": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "enum": [
+                                "default",
+                                "canonical",
+                                "custom"
+                            ]
+                        }
+                    ]
+                },
+                "message_code": {
+                    "anyOf": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "enum": [
+                                "tickets_not_yet_on_sale",
+                                "tickets_with_sales_ended",
+                                "tickets_sold_out",
+                                "tickets_unavailable",
+                                "tickets_at_the_door",
+                                "event_cancelled",
+                                "event_postponed"
+                            ]
+                        }
+                    ]
+                }
+            }
+        },
+        "checkout_settings": {
+            "type": "object",
+            "properties": {
+                "created": {
+                    "type": "string"
+                },
+                "changed": {
+                    "type": "string"
+                },
+                "country_code": {
+                    "type": "string"
+                },
+                "currency_code": {
+                    "type": "string"
+                },
+                "checkout_method": {
+                    "enum": [
+                        "paypal",
+                        "eventbrite",
+                        "authnet",
+                        "offline"
+                    ]
+                },
+                "offline_settings": {
+                    "type": "array"
+                },
+                "user_instrument_vault_id": {
+                    "type": "string"
+                }
+            }
+        }
+    },
+    "required": [
+        "created",
+        "changed"
+    ],
+    "meta": {
+        "folder": "Events",
+        "filename": "createOrganizationsEvents",
+        "resourceName": "Create",
+        "transition": "Create an Event",
+        "transitionResponseTypes": {
+            "200": "\\Eventbrite\\Model\\DataType\\Event",
+            "400": "\\Eventbrite\\Model\\DataType\\Error"
+        },
+        "transaction": "httpTransaction",
+        "messageType": "httpResponse",
+        "resourceGroupName": "Events",
+        "resourceGroup": "\\Eventbrite\\Resource\\Events",
+        "transactionMethodName": "createOrganizationsEvents",
+        "responseStatusCode": 200,
+        "responseType": "\\Eventbrite\\Model\\DataType\\Event"
+    }
+}

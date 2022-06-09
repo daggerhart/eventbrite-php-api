@@ -1,0 +1,18 @@
+{
+    "resource_uri": "https:\/\/www.eventbriteapi.com\/v3\/events\/12345\/canned_questions\/job_title\/",
+    "id": "job_title",
+    "question": {
+        "text": "Job Title",
+        "html": "Job Title"
+    },
+    "type": "text",
+    "required": false,
+    "include": true,
+    "editable": true,
+    "choices": [],
+    "ticket_classes": [],
+    "group_id": "work_information",
+    "group_display_header": "Work Info",
+    "respondent": "ticket_buyer",
+    "default_value": null
+}

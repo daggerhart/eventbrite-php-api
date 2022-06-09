@@ -1,0 +1,45 @@
+{
+    "$schema": "http:\/\/json-schema.org\/draft-07\/schema#",
+    "type": "object",
+    "properties": {
+        "error_description": {
+            "type": "string"
+        },
+        "error_detail": {
+            "type": "object"
+        },
+        "status_code": {
+            "type": "number"
+        },
+        "error": {
+            "anyOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "enum": [
+                        "MISSING",
+                        "INVALID"
+                    ]
+                }
+            ]
+        }
+    },
+    "meta": {
+        "folder": "TextsOverrides",
+        "filename": "getOrganizationsTextOverride",
+        "resourceName": "Retrieve Text Overrides",
+        "transition": "Retrieve Text Overrides",
+        "transitionResponseTypes": {
+            "200": "\\Eventbrite\\Model\\DataType\\TextOverridesResponseContent",
+            "400": "\\Eventbrite\\Model\\DataType\\Error"
+        },
+        "transaction": "httpTransaction",
+        "messageType": "httpResponse",
+        "resourceGroupName": "TextsOverrides",
+        "resourceGroup": "\\Eventbrite\\Resource\\TextsOverrides",
+        "transactionMethodName": "getOrganizationsTextOverride",
+        "responseStatusCode": 400,
+        "responseType": "\\Eventbrite\\Model\\DataType\\Error"
+    }
+}

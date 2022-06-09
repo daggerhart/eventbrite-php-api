@@ -1,0 +1,37 @@
+{
+    "$schema": "http:\/\/json-schema.org\/draft-07\/schema#",
+    "type": "object",
+    "properties": {
+        "error_description": {
+            "type": "string"
+        },
+        "error_detail": {
+            "type": "object"
+        },
+        "status_code": {
+            "type": "number"
+        },
+        "error": {
+            "const": "NOT_AUTHORIZED"
+        }
+    },
+    "meta": {
+        "folder": "InventoryTiers",
+        "filename": "createEventInventoryTiers",
+        "resourceName": "Create",
+        "transition": "Create Multiple Inventory Tiers",
+        "transitionResponseTypes": {
+            "200": "\\Eventbrite\\Model\\ModelBase",
+            "400": "\\Eventbrite\\Model\\DataType\\Error",
+            "403": "\\Eventbrite\\Model\\DataType\\Error",
+            "404": "\\Eventbrite\\Model\\DataType\\Error"
+        },
+        "transaction": "httpTransaction",
+        "messageType": "httpResponse",
+        "resourceGroupName": "InventoryTiers",
+        "resourceGroup": "\\Eventbrite\\Resource\\InventoryTiers",
+        "transactionMethodName": "createEventInventoryTiers",
+        "responseStatusCode": 403,
+        "responseType": "\\Eventbrite\\Model\\DataType\\Error"
+    }
+}

@@ -1,0 +1,19 @@
+{
+    "pagination": {
+        "continuation": "dGhpcyBpcyBhIGNvbnRpbnVhdGlvbiB0b2tlbg",
+        "has_more_items": false
+    },
+    "roles": [
+        {
+            "id": "12345",
+            "name": "boxoffice",
+            "description": "Boxoffice Management on events",
+            "organization_id": "226753167503",
+            "permissions": [],
+            "immutable": false,
+            "grantable": true,
+            "deletable": true,
+            "permission_type": "user"
+        }
+    ]
+}

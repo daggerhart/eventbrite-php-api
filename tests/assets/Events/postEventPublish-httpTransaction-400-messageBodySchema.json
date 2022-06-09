@@ -1,0 +1,51 @@
+{
+    "$schema": "http:\/\/json-schema.org\/draft-07\/schema#",
+    "type": "object",
+    "properties": {
+        "error_description": {
+            "type": "string"
+        },
+        "error_detail": {
+            "type": "object"
+        },
+        "status_code": {
+            "type": "number"
+        },
+        "error": {
+            "anyOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "enum": [
+                        "ALREADY_PUBLISHED_OR_DELETED",
+                        "NO_PAYMENT_OPTIONS",
+                        "PAYMENT_OPTIONS_DEPRECATED_SPLIT_FEES",
+                        "PAYMENT_OPTIONS_NO_COUNTRY",
+                        "PAYMENT_OPTIONS_NO_PAYMENT_TYPE",
+                        "PAYMENT_OPTIONS_PAYPAL_NO_EMAIL",
+                        "PUBLISH_FREE_EVENT_FEATURE_DENIED",
+                        "ERROR_CANNOT_PUBLISH_SERIES_WITH_NO_DATES"
+                    ]
+                }
+            ]
+        }
+    },
+    "meta": {
+        "folder": "Events",
+        "filename": "postEventPublish",
+        "resourceName": "Publish",
+        "transition": "Publish an Event",
+        "transitionResponseTypes": {
+            "200": "\\Eventbrite\\Model\\ModelBase",
+            "400": "\\Eventbrite\\Model\\DataType\\Error"
+        },
+        "transaction": "httpTransaction",
+        "messageType": "httpResponse",
+        "resourceGroupName": "Events",
+        "resourceGroup": "\\Eventbrite\\Resource\\Events",
+        "transactionMethodName": "postEventPublish",
+        "responseStatusCode": 400,
+        "responseType": "\\Eventbrite\\Model\\DataType\\Error"
+    }
+}

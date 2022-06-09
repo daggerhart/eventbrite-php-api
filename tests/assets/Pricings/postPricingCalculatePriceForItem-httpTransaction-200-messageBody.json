@@ -1,0 +1,28 @@
+{
+    "item_pricing": {
+        "organizer_share": {
+            "currency": "USD",
+            "value": 432,
+            "major_value": "4.32",
+            "display": "4.32 USD"
+        },
+        "total_fees": {
+            "currency": "USD",
+            "value": 432,
+            "major_value": "4.32",
+            "display": "4.32 USD"
+        },
+        "total_taxes": {
+            "currency": "USD",
+            "value": 432,
+            "major_value": "4.32",
+            "display": "4.32 USD"
+        },
+        "total_price": {
+            "currency": "USD",
+            "value": 432,
+            "major_value": "4.32",
+            "display": "4.32 USD"
+        }
+    }
+}

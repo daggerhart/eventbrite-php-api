@@ -1,0 +1,32 @@
+{
+    "$schema": "http:\/\/json-schema.org\/draft-07\/schema#",
+    "type": "object",
+    "properties": {
+        "error_description": {
+            "type": "string"
+        },
+        "status_code": {
+            "type": "string"
+        },
+        "error": {
+            "type": "string"
+        }
+    },
+    "meta": {
+        "folder": "Webhooks",
+        "filename": "createWebhook",
+        "resourceName": "Create",
+        "transition": "Create Webhooks - deprecated",
+        "transitionResponseTypes": {
+            "200": "\\Eventbrite\\Model\\DataType\\Webhook",
+            "403": "\\Eventbrite\\Model\\ModelBase"
+        },
+        "transaction": "httpTransaction",
+        "messageType": "httpResponse",
+        "resourceGroupName": "Webhooks",
+        "resourceGroup": "\\Eventbrite\\Resource\\Webhooks",
+        "transactionMethodName": "createWebhook",
+        "responseStatusCode": 403,
+        "responseType": "\\Eventbrite\\Model\\ModelBase"
+    }
+}

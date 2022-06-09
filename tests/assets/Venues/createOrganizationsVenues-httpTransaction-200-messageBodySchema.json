@@ -1,0 +1,152 @@
+{
+    "$schema": "http:\/\/json-schema.org\/draft-07\/schema#",
+    "type": "object",
+    "properties": {
+        "name": {
+            "type": "string"
+        },
+        "age_restriction": {
+            "anyOf": [
+                {
+                    "type": "null"
+                },
+                {
+                    "type": "string"
+                }
+            ]
+        },
+        "capacity": {
+            "anyOf": [
+                {
+                    "type": "null"
+                },
+                {
+                    "type": "number"
+                }
+            ]
+        },
+        "address": {
+            "anyOf": [
+                {
+                    "type": "null"
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "address_1": {
+                            "anyOf": [
+                                {
+                                    "type": "null"
+                                },
+                                {
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "address_2": {
+                            "anyOf": [
+                                {
+                                    "type": "null"
+                                },
+                                {
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "city": {
+                            "anyOf": [
+                                {
+                                    "type": "null"
+                                },
+                                {
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "region": {
+                            "anyOf": [
+                                {
+                                    "type": "null"
+                                },
+                                {
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "postal_code": {
+                            "anyOf": [
+                                {
+                                    "type": "null"
+                                },
+                                {
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "country": {
+                            "anyOf": [
+                                {
+                                    "type": "null"
+                                },
+                                {
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "latitude": {
+                            "anyOf": [
+                                {
+                                    "type": "null"
+                                },
+                                {
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "longitude": {
+                            "anyOf": [
+                                {
+                                    "type": "null"
+                                },
+                                {
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        "resource_uri": {
+            "type": "string"
+        },
+        "id": {
+            "type": "string"
+        },
+        "latitude": {
+            "type": "string"
+        },
+        "longitude": {
+            "type": "string"
+        }
+    },
+    "required": [
+        "name"
+    ],
+    "meta": {
+        "folder": "Venues",
+        "filename": "createOrganizationsVenues",
+        "resourceName": "Create",
+        "transition": "Create a Venue",
+        "transitionResponseTypes": {
+            "200": "\\Eventbrite\\Model\\DataType\\VenueResponse"
+        },
+        "transaction": "httpTransaction",
+        "messageType": "httpResponse",
+        "resourceGroupName": "Venues",
+        "resourceGroup": "\\Eventbrite\\Resource\\Venues",
+        "transactionMethodName": "createOrganizationsVenues",
+        "responseStatusCode": 200,
+        "responseType": "\\Eventbrite\\Model\\DataType\\VenueResponse"
+    }
+}

@@ -1,0 +1,32 @@
+{
+    "$schema": "http:\/\/json-schema.org\/draft-07\/schema#",
+    "type": "object",
+    "properties": {
+        "error_description": {
+            "type": "string"
+        },
+        "error_detail": {
+            "type": "object"
+        },
+        "status_code": {
+            "type": "number"
+        }
+    },
+    "meta": {
+        "folder": "Webhooks",
+        "filename": "getOrganizationWebhook",
+        "resourceName": "List",
+        "transition": "List Webhook by Organization ID",
+        "transitionResponseTypes": {
+            "200": "\\Eventbrite\\Model\\ModelBase",
+            "400": "\\Eventbrite\\Model\\DataType\\Error"
+        },
+        "transaction": "httpTransaction",
+        "messageType": "httpResponse",
+        "resourceGroupName": "Webhooks",
+        "resourceGroup": "\\Eventbrite\\Resource\\Webhooks",
+        "transactionMethodName": "getOrganizationWebhook",
+        "responseStatusCode": 400,
+        "responseType": "\\Eventbrite\\Model\\DataType\\Error"
+    }
+}

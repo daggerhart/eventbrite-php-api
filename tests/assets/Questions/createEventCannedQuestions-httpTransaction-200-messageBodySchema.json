@@ -1,0 +1,77 @@
+{
+    "$schema": "http:\/\/json-schema.org\/draft-07\/schema#",
+    "type": "object",
+    "properties": {
+        "resource_uri": {
+            "type": "string"
+        },
+        "id": {
+            "type": "string"
+        },
+        "question": {
+            "type": "object",
+            "properties": {
+                "text": {
+                    "type": "string"
+                },
+                "html": {
+                    "type": "string"
+                }
+            }
+        },
+        "type": {
+            "type": "string"
+        },
+        "required": {
+            "type": "boolean"
+        },
+        "include": {
+            "type": "boolean"
+        },
+        "editable": {
+            "type": "boolean"
+        },
+        "choices": {
+            "type": "array"
+        },
+        "ticket_classes": {
+            "type": "array"
+        },
+        "group_id": {
+            "type": "string"
+        },
+        "group_display_header": {
+            "type": "string"
+        },
+        "respondent": {
+            "type": "string"
+        },
+        "default_value": {
+            "anyOf": [
+                {
+                    "type": "null"
+                },
+                {
+                    "type": "string"
+                }
+            ]
+        }
+    },
+    "meta": {
+        "folder": "Questions",
+        "filename": "createEventCannedQuestions",
+        "resourceName": "Create Default Question",
+        "transition": "Create a Default Question for an Event",
+        "transitionResponseTypes": {
+            "200": "\\Eventbrite\\Model\\DataType\\CannedQuestion",
+            "400": "\\Eventbrite\\Model\\DataType\\Error"
+        },
+        "transaction": "httpTransaction",
+        "messageType": "httpResponse",
+        "resourceGroupName": "Questions",
+        "resourceGroup": "\\Eventbrite\\Resource\\Questions",
+        "transactionMethodName": "createEventCannedQuestions",
+        "responseStatusCode": 200,
+        "responseType": "\\Eventbrite\\Model\\DataType\\CannedQuestion"
+    }
+}

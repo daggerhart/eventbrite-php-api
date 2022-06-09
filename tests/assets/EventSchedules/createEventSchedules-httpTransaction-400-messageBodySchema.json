@@ -1,0 +1,51 @@
+{
+    "$schema": "http:\/\/json-schema.org\/draft-07\/schema#",
+    "type": "object",
+    "properties": {
+        "error_description": {
+            "type": "string"
+        },
+        "error_detail": {
+            "type": "object"
+        },
+        "status_code": {
+            "type": "number"
+        },
+        "error": {
+            "anyOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "enum": [
+                        "MISSING",
+                        "INVALID",
+                        "DTSTART_MISSING",
+                        "RECURRENCE_RULE_DATES_NOT_IN_UTC",
+                        "DTSTART_OUTSIDE_PERMITTED_RANGE",
+                        "LAST_OCCURRENCE_START_EXCEEDS_LIMIT",
+                        "EXCEEDS_MAX_OCCURRENCES"
+                    ]
+                }
+            ]
+        }
+    },
+    "meta": {
+        "folder": "EventSchedules",
+        "filename": "createEventSchedules",
+        "resourceName": "Create",
+        "transition": "Create an event schedule",
+        "transitionResponseTypes": {
+            "200": "\\Eventbrite\\Model\\DataType\\Schedule",
+            "400": "\\Eventbrite\\Model\\DataType\\Error",
+            "403": "\\Eventbrite\\Model\\DataType\\Error"
+        },
+        "transaction": "httpTransaction",
+        "messageType": "httpResponse",
+        "resourceGroupName": "EventSchedules",
+        "resourceGroup": "\\Eventbrite\\Resource\\EventSchedules",
+        "transactionMethodName": "createEventSchedules",
+        "responseStatusCode": 400,
+        "responseType": "\\Eventbrite\\Model\\DataType\\Error"
+    }
+}
