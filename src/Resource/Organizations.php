@@ -18,7 +18,7 @@ class Organizations extends \Eventbrite\Model\ResourceBase
         $response_types = [];
         $response_types[200] = \Eventbrite\Model\Collection\Organization::class;
         $response = $this->request('GET', "/users/me/organizations/", $query);
-        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromRequest'], [$response->getBody(), 'organizations', '\\Eventbrite\\Model\\DataType\\Organization']);
+        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromResponse'], [$response->getJson(), 'organizations', '\\Eventbrite\\Model\\DataType\\Organization']);
     }
     
     /**
@@ -35,7 +35,7 @@ class Organizations extends \Eventbrite\Model\ResourceBase
         $response_types = [];
         $response_types[200] = \Eventbrite\Model\Collection\Organization::class;
         $response = $this->request('GET', "/users/{$user_id}/organizations/", $query);
-        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromRequest'], [$response->getBody(), 'organizations', '\\Eventbrite\\Model\\DataType\\Organization']);
+        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromResponse'], [$response->getJson(), 'organizations', '\\Eventbrite\\Model\\DataType\\Organization']);
     }
     
 }

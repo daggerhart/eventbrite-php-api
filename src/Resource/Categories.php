@@ -21,7 +21,7 @@ class Categories extends \Eventbrite\Model\ResourceBase
         $response_types = [];
         $response_types[200] = \Eventbrite\Model\ModelBase::class;
         $response = $this->request('GET', "/categories/{$id}/", $query);
-        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromRequest'], [$response->getBody(), '', '']);
+        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromResponse'], [$response->getJson(), '', '']);
     }
     
     /**
@@ -38,7 +38,7 @@ class Categories extends \Eventbrite\Model\ResourceBase
         $response_types = [];
         $response_types[200] = \Eventbrite\Model\ModelBase::class;
         $response = $this->request('GET', "/subcategories/{$subcategory_id}/", $query);
-        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromRequest'], [$response->getBody(), '', '']);
+        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromResponse'], [$response->getJson(), '', '']);
     }
     
     /**
@@ -52,7 +52,7 @@ class Categories extends \Eventbrite\Model\ResourceBase
         $response_types = [];
         $response_types[200] = \Eventbrite\Model\Collection\Category::class;
         $response = $this->request('GET', "/categories/", $query);
-        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromRequest'], [$response->getBody(), 'categories', '\\Eventbrite\\Model\\DataType\\Category']);
+        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromResponse'], [$response->getJson(), 'categories', '\\Eventbrite\\Model\\DataType\\Category']);
     }
     
     /**
@@ -66,7 +66,7 @@ class Categories extends \Eventbrite\Model\ResourceBase
         $response_types = [];
         $response_types[200] = \Eventbrite\Model\Collection\Subcategory::class;
         $response = $this->request('GET', "/subcategories/", $query);
-        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromRequest'], [$response->getBody(), 'subcategories', '\\Eventbrite\\Model\\DataType\\Subcategory']);
+        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromResponse'], [$response->getJson(), 'subcategories', '\\Eventbrite\\Model\\DataType\\Subcategory']);
     }
     
 }

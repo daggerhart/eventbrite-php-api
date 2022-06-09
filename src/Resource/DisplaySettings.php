@@ -21,7 +21,7 @@ class DisplaySettings extends \Eventbrite\Model\ResourceBase
         $response_types = [];
         $response_types[200] = \Eventbrite\Model\DataType\DisplaySettings::class;
         $response = $this->request('GET', "/events/{$event_id}/display_settings/", $query);
-        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromRequest'], [$response->getBody(), '', '']);
+        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromResponse'], [$response->getJson(), '', '']);
     }
     
     /**
@@ -40,7 +40,7 @@ class DisplaySettings extends \Eventbrite\Model\ResourceBase
         $response_types = [];
         $response_types[200] = \Eventbrite\Model\DataType\DisplaySettings::class;
         $response = $this->request('POST', "/events/{$event_id}/display_settings/", $query);
-        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromRequest'], [$response->getBody(), '', '']);
+        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromResponse'], [$response->getJson(), '', '']);
     }
     
 }

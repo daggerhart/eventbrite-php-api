@@ -83,7 +83,8 @@ class ApiClient
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function request(string $method, string $endpoint_uri, array $request_options = []) : \Psr\Http\Message\ResponseInterface {
-        return new \Eventbrite\Model\ApiClientResponse($this->httpClient->request($method, $this->requestUrl($endpoint_uri), $request_options));
+        $response = $this->httpClient->request($method, $this->requestUrl($endpoint_uri), $request_options);
+        return new \Eventbrite\Model\ApiClientResponse($response->getStatusCode(), $response->getHeaders(), $response->getBody(), $response->getProtocolVersion(), $response->getReasonPhrase());
     }
     
     /**

@@ -21,7 +21,7 @@ class EventTeams extends \Eventbrite\Model\ResourceBase
         $response_types = [];
         $response_types[200] = \Eventbrite\Model\PaginationCollection::class;
         $response = $this->request('GET', "/events/{$event_id}/teams/", $query);
-        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromRequest'], [$response->getBody(), 'teams', '\\Eventbrite\\Model\\DataType\\EventTeamResponse']);
+        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromResponse'], [$response->getJson(), 'teams', '\\Eventbrite\\Model\\DataType\\EventTeamResponse']);
     }
     
     /**
@@ -40,7 +40,7 @@ class EventTeams extends \Eventbrite\Model\ResourceBase
         $response_types = [];
         $response_types[200] = \Eventbrite\Model\DataType\EventTeamResponse::class;
         $response = $this->request('GET', "/events/{$event_id}/teams/{$team_id}/", $query);
-        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromRequest'], [$response->getBody(), '', '']);
+        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromResponse'], [$response->getJson(), '', '']);
     }
     
     /**
@@ -59,7 +59,7 @@ class EventTeams extends \Eventbrite\Model\ResourceBase
         $response_types = [];
         $response_types[200] = \Eventbrite\Model\Collection\Attendee::class;
         $response = $this->request('GET', "/events/{$event_id}/teams/{$team_id}/attendees/", $query);
-        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromRequest'], [$response->getBody(), 'attendees', '\\Eventbrite\\Model\\DataType\\Attendee']);
+        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromResponse'], [$response->getJson(), 'attendees', '\\Eventbrite\\Model\\DataType\\Attendee']);
     }
     
     /**
@@ -88,7 +88,7 @@ class EventTeams extends \Eventbrite\Model\ResourceBase
         $response_types = [];
         $response_types[200] = \Eventbrite\Model\ModelBase::class;
         $response = $this->request('POST', "/events/{$event_id}/teams/create/", $query);
-        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromRequest'], [$response->getBody(), '', '']);
+        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromResponse'], [$response->getJson(), '', '']);
     }
     
     /**
@@ -110,7 +110,7 @@ class EventTeams extends \Eventbrite\Model\ResourceBase
         $response_types = [];
         $response_types[200] = \Eventbrite\Model\ModelBase::class;
         $response = $this->request('POST', "/events/{$event_id}/teams/{$team_id}/check_password/", $query);
-        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromRequest'], [$response->getBody(), '', '']);
+        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromResponse'], [$response->getJson(), '', '']);
     }
     
     /**
@@ -129,7 +129,7 @@ class EventTeams extends \Eventbrite\Model\ResourceBase
         $response_types = [];
         $response_types[200] = \Eventbrite\Model\PaginationCollection::class;
         $response = $this->request('GET', "/events/{$event_id}/teams/search/?term={$term}", $query);
-        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromRequest'], [$response->getBody(), 'teams', '\\Eventbrite\\Model\\ModelBase']);
+        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromResponse'], [$response->getJson(), 'teams', '\\Eventbrite\\Model\\ModelBase']);
     }
     
 }

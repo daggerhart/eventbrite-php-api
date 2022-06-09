@@ -21,7 +21,7 @@ class Webhooks extends \Eventbrite\Model\ResourceBase
         $response_types = [];
         $response_types[200] = \Eventbrite\Model\DataType\Webhook::class;
         $response = $this->request('POST', "/organizations/{$organization_id}/webhooks/", $query);
-        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromRequest'], [$response->getBody(), '', '']);
+        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromResponse'], [$response->getJson(), '', '']);
     }
     
     /**
@@ -39,7 +39,7 @@ class Webhooks extends \Eventbrite\Model\ResourceBase
         $response_types[200] = \Eventbrite\Model\DataType\Webhook::class;
         $response_types[403] = \Eventbrite\Model\ModelBase::class;
         $response = $this->request('POST', "/webhooks/", $query);
-        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromRequest'], [$response->getBody(), '', '']);
+        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromResponse'], [$response->getJson(), '', '']);
     }
     
     /**
@@ -56,7 +56,7 @@ class Webhooks extends \Eventbrite\Model\ResourceBase
         $response_types[200] = \Eventbrite\Model\ModelBase::class;
         $response_types[400] = \Eventbrite\Model\DataType\Error::class;
         $response = $this->request('GET', "/organizations/{$organization_id}/webhooks/", $query);
-        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromRequest'], [$response->getBody(), 'webhooks', '\\Eventbrite\\Model\\ModelBase']);
+        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromResponse'], [$response->getJson(), 'webhooks', '\\Eventbrite\\Model\\ModelBase']);
     }
     
     /**
@@ -71,7 +71,7 @@ class Webhooks extends \Eventbrite\Model\ResourceBase
         $response_types[200] = \Eventbrite\Model\ModelBase::class;
         $response_types[400] = \Eventbrite\Model\DataType\Error::class;
         $response = $this->request('GET', "/webhooks/", $query);
-        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromRequest'], [$response->getBody(), 'webhooks', '\\Eventbrite\\Model\\ModelBase']);
+        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromResponse'], [$response->getJson(), 'webhooks', '\\Eventbrite\\Model\\ModelBase']);
     }
     
     /**
@@ -90,7 +90,7 @@ class Webhooks extends \Eventbrite\Model\ResourceBase
         $response_types[400] = \Eventbrite\Model\DataType\Error::class;
         $response_types[403] = \Eventbrite\Model\ModelBase::class;
         $response = $this->request('DELETE', "/webhooks/{$id}/", $query);
-        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromRequest'], [$response->getBody(), '', '']);
+        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromResponse'], [$response->getJson(), '', '']);
     }
     
 }

@@ -23,7 +23,7 @@ class Questions extends \Eventbrite\Model\ResourceBase
         $response_types = [];
         $response_types[200] = \Eventbrite\Model\PaginationCollection::class;
         $response = $this->request('GET', "/events/{$event_id}/canned_questions/", $query);
-        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromRequest'], [$response->getBody(), 'questions', '\\Eventbrite\\Model\\DataType\\CannedQuestion']);
+        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromResponse'], [$response->getJson(), 'questions', '\\Eventbrite\\Model\\DataType\\CannedQuestion']);
     }
     
     /**
@@ -43,7 +43,7 @@ class Questions extends \Eventbrite\Model\ResourceBase
         $response_types[200] = \Eventbrite\Model\ModelBase::class;
         $response_types[404] = \Eventbrite\Model\ModelBase::class;
         $response = $this->request('GET', "/event/{$event_id}/canned_questions/{$question_id}", $query);
-        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromRequest'], [$response->getBody(), '', '']);
+        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromResponse'], [$response->getJson(), '', '']);
     }
     
     /**
@@ -67,7 +67,7 @@ class Questions extends \Eventbrite\Model\ResourceBase
         $response_types[200] = \Eventbrite\Model\DataType\CannedQuestion::class;
         $response_types[400] = \Eventbrite\Model\DataType\Error::class;
         $response = $this->request('POST', "/events/{$event_id}/canned_questions/", $query);
-        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromRequest'], [$response->getBody(), '', '']);
+        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromResponse'], [$response->getJson(), '', '']);
     }
     
     /**
@@ -88,7 +88,7 @@ class Questions extends \Eventbrite\Model\ResourceBase
         $response_types[400] = \Eventbrite\Model\ModelBase::class;
         $response_types[404] = \Eventbrite\Model\ModelBase::class;
         $response = $this->request('POST', "/event/{$event_id}/canned_questions/{$question_id}", $query);
-        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromRequest'], [$response->getBody(), '', '']);
+        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromResponse'], [$response->getJson(), '', '']);
     }
     
     /**
@@ -108,7 +108,7 @@ class Questions extends \Eventbrite\Model\ResourceBase
         $response_types[200] = \Eventbrite\Model\ModelBase::class;
         $response_types[404] = \Eventbrite\Model\ModelBase::class;
         $response = $this->request('DELETE', "/event/{$event_id}/canned_questions/{$question_id}", $query);
-        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromRequest'], [$response->getBody(), '', '']);
+        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromResponse'], [$response->getJson(), '', '']);
     }
     
     /**
@@ -126,7 +126,7 @@ class Questions extends \Eventbrite\Model\ResourceBase
         $response_types[200] = \Eventbrite\Model\DataType\BaseQuestion::class;
         $response_types[404] = \Eventbrite\Model\ModelBase::class;
         $response = $this->request('GET', "/events/{$event_id}/questions/", $query);
-        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromRequest'], [$response->getBody(), 'questions', '\\Eventbrite\\Model\\DataType\\BaseQuestion']);
+        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromResponse'], [$response->getJson(), 'questions', '\\Eventbrite\\Model\\DataType\\BaseQuestion']);
     }
     
     /**
@@ -151,7 +151,7 @@ class Questions extends \Eventbrite\Model\ResourceBase
         $response_types[400] = \Eventbrite\Model\DataType\Error::class;
         $response_types[403] = \Eventbrite\Model\ModelBase::class;
         $response = $this->request('POST', "/events/{$event_id}/questions/", $query);
-        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromRequest'], [$response->getBody(), '', '']);
+        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromResponse'], [$response->getJson(), '', '']);
     }
     
     /**
@@ -171,7 +171,7 @@ class Questions extends \Eventbrite\Model\ResourceBase
         $response_types[200] = \Eventbrite\Model\DataType\BaseQuestion::class;
         $response_types[404] = \Eventbrite\Model\ModelBase::class;
         $response = $this->request('GET', "/events/{$event_id}/questions/{$question_id}/", $query);
-        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromRequest'], [$response->getBody(), '', '']);
+        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromResponse'], [$response->getJson(), '', '']);
     }
     
     /**
@@ -192,7 +192,7 @@ class Questions extends \Eventbrite\Model\ResourceBase
         $response_types[404] = \Eventbrite\Model\ModelBase::class;
         $response_types[403] = \Eventbrite\Model\ModelBase::class;
         $response = $this->request('DELETE', "/events/{$event_id}/questions/{$question_id}/", $query);
-        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromRequest'], [$response->getBody(), '', '']);
+        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromResponse'], [$response->getJson(), '', '']);
     }
     
 }

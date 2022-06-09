@@ -23,7 +23,7 @@ class StructuredContents extends \Eventbrite\Model\ResourceBase
         $response_types[200] = \Eventbrite\Model\DataType\StructuredContentPage::class;
         $response_types[400] = \Eventbrite\Model\ModelBase::class;
         $response = $this->request('GET', "/events/{$id}/structured_content/", $query);
-        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromRequest'], [$response->getBody(), '', '']);
+        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromResponse'], [$response->getJson(), '', '']);
     }
     
     /**
@@ -42,7 +42,7 @@ class StructuredContents extends \Eventbrite\Model\ResourceBase
         $response_types[200] = \Eventbrite\Model\DataType\StructuredContentPage::class;
         $response_types[400] = \Eventbrite\Model\ModelBase::class;
         $response = $this->request('GET', "/events/{$id}/structured_content/edit/", $query);
-        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromRequest'], [$response->getBody(), '', '']);
+        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromResponse'], [$response->getJson(), '', '']);
     }
     
     /**
@@ -72,7 +72,7 @@ class StructuredContents extends \Eventbrite\Model\ResourceBase
         $response_types[200] = \Eventbrite\Model\DataType\StructuredContentPage::class;
         $response_types[400] = \Eventbrite\Model\ModelBase::class;
         $response = $this->request('POST', "/events/{$id}/structured_content/{$version}/", $query);
-        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromRequest'], [$response->getBody(), '', '']);
+        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromResponse'], [$response->getJson(), '', '']);
     }
     
 }

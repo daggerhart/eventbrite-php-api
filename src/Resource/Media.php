@@ -21,7 +21,7 @@ class Media extends \Eventbrite\Model\ResourceBase
         $response_types = [];
         $response_types[200] = \Eventbrite\Model\DataType\Image::class;
         $response = $this->request('GET', "/media/{$media_id}/", $query);
-        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromRequest'], [$response->getBody(), '', '']);
+        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromResponse'], [$response->getJson(), '', '']);
     }
     
     /**
@@ -36,7 +36,7 @@ class Media extends \Eventbrite\Model\ResourceBase
         $response_types[200] = \Eventbrite\Model\DataType\MediaUploadPost::class;
         $response_types[400] = \Eventbrite\Model\DataType\Error::class;
         $response = $this->request('POST', "/media/upload/", $query);
-        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromRequest'], [$response->getBody(), '', '']);
+        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromResponse'], [$response->getJson(), '', '']);
     }
     
     /**
@@ -50,7 +50,7 @@ class Media extends \Eventbrite\Model\ResourceBase
         $response_types = [];
         $response_types[200] = \Eventbrite\Model\DataType\MediaUpload::class;
         $response = $this->request('GET', "/media/upload/", $query);
-        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromRequest'], [$response->getBody(), '', '']);
+        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromResponse'], [$response->getJson(), '', '']);
     }
     
 }

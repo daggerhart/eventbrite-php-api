@@ -26,7 +26,7 @@ class TextsOverrides extends \Eventbrite\Model\ResourceBase
         $response_types[200] = \Eventbrite\Model\DataType\TextOverridesResponseContent::class;
         $response_types[400] = \Eventbrite\Model\DataType\Error::class;
         $response = $this->request('GET', "/organizations/{$organization_id}/text_overrides/", $query);
-        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromRequest'], [$response->getBody(), '', '']);
+        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromResponse'], [$response->getJson(), '', '']);
     }
     
     /**
@@ -57,7 +57,7 @@ class TextsOverrides extends \Eventbrite\Model\ResourceBase
         $response_types[200] = \Eventbrite\Model\DataType\TextOverridesResponseContent::class;
         $response_types[400] = \Eventbrite\Model\DataType\Error::class;
         $response = $this->request('POST', "/organizations/{$organization_id}/text_overrides/", $query);
-        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromRequest'], [$response->getBody(), '', '']);
+        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromResponse'], [$response->getJson(), '', '']);
     }
     
 }

@@ -41,7 +41,7 @@ class Pricings extends \Eventbrite\Model\ResourceBase
         $response_types[200] = \Eventbrite\Model\ModelBase::class;
         $response_types[400] = \Eventbrite\Model\DataType\Error::class;
         $response = $this->request('POST', "/pricing/calculate_price_for_item/", $query);
-        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromRequest'], [$response->getBody(), '', '']);
+        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromResponse'], [$response->getJson(), '', '']);
     }
     
     /**
@@ -61,7 +61,7 @@ class Pricings extends \Eventbrite\Model\ResourceBase
         $response_types[200] = \Eventbrite\Model\DataType\FeeRate::class;
         $response_types[400] = \Eventbrite\Model\DataType\Error::class;
         $response = $this->request('GET', "/pricing/fee_rates", $query);
-        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromRequest'], [$response->getBody(), 'fee_rates', '\\Eventbrite\\Model\\DataType\\FeeRate']);
+        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromResponse'], [$response->getJson(), 'fee_rates', '\\Eventbrite\\Model\\DataType\\FeeRate']);
     }
     
 }

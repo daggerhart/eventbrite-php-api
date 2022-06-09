@@ -21,7 +21,7 @@ class Venues extends \Eventbrite\Model\ResourceBase
         $response_types = [];
         $response_types[200] = \Eventbrite\Model\DataType\VenueResponse::class;
         $response = $this->request('GET', "/venues/{$venue_id}/", $query);
-        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromRequest'], [$response->getBody(), '', '']);
+        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromResponse'], [$response->getJson(), '', '']);
     }
     
     /**
@@ -40,7 +40,7 @@ class Venues extends \Eventbrite\Model\ResourceBase
         $response_types = [];
         $response_types[200] = \Eventbrite\Model\DataType\VenueResponse::class;
         $response = $this->request('POST', "/organizations/{$organization_id}/venues/", $query);
-        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromRequest'], [$response->getBody(), '', '']);
+        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromResponse'], [$response->getJson(), '', '']);
     }
     
     /**
@@ -59,7 +59,7 @@ class Venues extends \Eventbrite\Model\ResourceBase
         $response_types = [];
         $response_types[200] = \Eventbrite\Model\DataType\VenueResponse::class;
         $response = $this->request('POST', "/venues/{$venue_id}/", $query);
-        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromRequest'], [$response->getBody(), '', '']);
+        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromResponse'], [$response->getJson(), '', '']);
     }
     
     /**
@@ -76,7 +76,7 @@ class Venues extends \Eventbrite\Model\ResourceBase
         $response_types = [];
         $response_types[200] = \Eventbrite\Model\PaginationCollection::class;
         $response = $this->request('GET', "/organizations/{$organization_id}/venues/", $query);
-        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromRequest'], [$response->getBody(), 'venues', '\\Eventbrite\\Model\\DataType\\VenueResponse']);
+        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromResponse'], [$response->getJson(), 'venues', '\\Eventbrite\\Model\\DataType\\VenueResponse']);
     }
     
 }

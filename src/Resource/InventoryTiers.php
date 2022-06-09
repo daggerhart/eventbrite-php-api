@@ -25,7 +25,7 @@ class InventoryTiers extends \Eventbrite\Model\ResourceBase
         $response_types[403] = \Eventbrite\Model\DataType\Error::class;
         $response_types[404] = \Eventbrite\Model\DataType\Error::class;
         $response = $this->request('GET', "/events/{$event_id}/inventory_tiers/{$inventory_tier_id}/", $query);
-        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromRequest'], [$response->getBody(), '', '']);
+        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromResponse'], [$response->getJson(), '', '']);
     }
     
     /**
@@ -47,7 +47,7 @@ class InventoryTiers extends \Eventbrite\Model\ResourceBase
         $response_types[403] = \Eventbrite\Model\DataType\Error::class;
         $response_types[404] = \Eventbrite\Model\DataType\Error::class;
         $response = $this->request('POST', "/events/{$event_id}/inventory_tiers/", $query);
-        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromRequest'], [$response->getBody(), '', '']);
+        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromResponse'], [$response->getJson(), '', '']);
     }
     
     /**
@@ -69,7 +69,7 @@ class InventoryTiers extends \Eventbrite\Model\ResourceBase
         $response_types[403] = \Eventbrite\Model\DataType\Error::class;
         $response_types[404] = \Eventbrite\Model\DataType\Error::class;
         $response = $this->request('POST', "/events/{$event_id}/inventory_tiers/", $query);
-        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromRequest'], [$response->getBody(), '', '']);
+        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromResponse'], [$response->getJson(), '', '']);
     }
     
     /**
@@ -93,7 +93,7 @@ class InventoryTiers extends \Eventbrite\Model\ResourceBase
         $response_types[403] = \Eventbrite\Model\DataType\Error::class;
         $response_types[404] = \Eventbrite\Model\DataType\Error::class;
         $response = $this->request('POST', "/events/{$event_id}/inventory_tiers/{$inventory_tier_id}/", $query);
-        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromRequest'], [$response->getBody(), '', '']);
+        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromResponse'], [$response->getJson(), '', '']);
     }
     
     /**
@@ -115,7 +115,7 @@ class InventoryTiers extends \Eventbrite\Model\ResourceBase
         $response_types[403] = \Eventbrite\Model\DataType\Error::class;
         $response_types[404] = \Eventbrite\Model\DataType\Error::class;
         $response = $this->request('POST', "/events/{$event_id}/inventory_tiers/", $query);
-        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromRequest'], [$response->getBody(), '', '']);
+        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromResponse'], [$response->getJson(), '', '']);
     }
     
     /**
@@ -134,7 +134,7 @@ class InventoryTiers extends \Eventbrite\Model\ResourceBase
         $response_types[403] = \Eventbrite\Model\DataType\Error::class;
         $response_types[404] = \Eventbrite\Model\DataType\Error::class;
         $response = $this->request('GET', "/events/{$event_id}/inventory_tiers/", $query);
-        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromRequest'], [$response->getBody(), 'inventory_tiers', '\\Eventbrite\\Model\\DataType\\InventoryTier']);
+        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromResponse'], [$response->getJson(), 'inventory_tiers', '\\Eventbrite\\Model\\DataType\\InventoryTier']);
     }
     
     /**
@@ -156,7 +156,7 @@ class InventoryTiers extends \Eventbrite\Model\ResourceBase
         $response_types[403] = \Eventbrite\Model\DataType\Error::class;
         $response_types[404] = \Eventbrite\Model\DataType\Error::class;
         $response = $this->request('DELETE', "/events/{$event_id}/inventory_tiers/{$inventory_tier_id}/", $query);
-        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromRequest'], [$response->getBody(), '', '']);
+        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromResponse'], [$response->getJson(), '', '']);
     }
     
 }

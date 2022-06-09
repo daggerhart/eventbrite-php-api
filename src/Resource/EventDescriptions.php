@@ -22,7 +22,7 @@ class EventDescriptions extends \Eventbrite\Model\ResourceBase
         $response_types[200] = \Eventbrite\Model\ModelBase::class;
         $response_types[400] = \Eventbrite\Model\ModelBase::class;
         $response = $this->request('GET', "/events/{$event_id}/description/", $query);
-        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromRequest'], [$response->getBody(), '', '']);
+        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromResponse'], [$response->getJson(), '', '']);
     }
     
 }

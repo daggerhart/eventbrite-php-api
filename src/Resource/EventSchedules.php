@@ -25,7 +25,7 @@ class EventSchedules extends \Eventbrite\Model\ResourceBase
         $response_types[400] = \Eventbrite\Model\DataType\Error::class;
         $response_types[403] = \Eventbrite\Model\DataType\Error::class;
         $response = $this->request('POST', "/events/{$event_id}/schedules/", $query);
-        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromRequest'], [$response->getBody(), '', '']);
+        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromResponse'], [$response->getJson(), '', '']);
     }
     
 }

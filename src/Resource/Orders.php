@@ -22,7 +22,7 @@ class Orders extends \Eventbrite\Model\ResourceBase
         $response_types[200] = \Eventbrite\Model\DataType\Order::class;
         $response_types[400] = \Eventbrite\Model\DataType\Error::class;
         $response = $this->request('GET', "/orders/{$order_id}/", $query);
-        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromRequest'], [$response->getBody(), '', '']);
+        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromResponse'], [$response->getJson(), '', '']);
     }
     
     /**
@@ -39,7 +39,7 @@ class Orders extends \Eventbrite\Model\ResourceBase
         $response_types = [];
         $response_types[200] = \Eventbrite\Model\Collection\Order::class;
         $response = $this->request('GET', "/organizations/{$organization_id}/orders/", $query);
-        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromRequest'], [$response->getBody(), 'orders', '\\Eventbrite\\Model\\DataType\\Order']);
+        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromResponse'], [$response->getJson(), 'orders', '\\Eventbrite\\Model\\DataType\\Order']);
     }
     
     /**
@@ -56,7 +56,7 @@ class Orders extends \Eventbrite\Model\ResourceBase
         $response_types = [];
         $response_types[200] = \Eventbrite\Model\Collection\Order::class;
         $response = $this->request('GET', "/events/{$event_id}/orders/", $query);
-        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromRequest'], [$response->getBody(), 'orders', '\\Eventbrite\\Model\\DataType\\Order']);
+        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromResponse'], [$response->getJson(), 'orders', '\\Eventbrite\\Model\\DataType\\Order']);
     }
     
     /**
@@ -73,7 +73,7 @@ class Orders extends \Eventbrite\Model\ResourceBase
         $response_types = [];
         $response_types[200] = \Eventbrite\Model\Collection\Order::class;
         $response = $this->request('GET', "/users/{$user_id}/orders/", $query);
-        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromRequest'], [$response->getBody(), 'orders', '\\Eventbrite\\Model\\DataType\\Order']);
+        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromResponse'], [$response->getJson(), 'orders', '\\Eventbrite\\Model\\DataType\\Order']);
     }
     
 }

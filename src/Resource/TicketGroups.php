@@ -21,7 +21,7 @@ class TicketGroups extends \Eventbrite\Model\ResourceBase
         $response_types = [];
         $response_types[200] = \Eventbrite\Model\DataType\TicketGroup::class;
         $response = $this->request('GET', "/ticket_groups/{$ticket_group_id}/", $query);
-        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromRequest'], [$response->getBody(), '', '']);
+        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromResponse'], [$response->getJson(), '', '']);
     }
     
     /**
@@ -41,7 +41,7 @@ class TicketGroups extends \Eventbrite\Model\ResourceBase
         $response_types[200] = \Eventbrite\Model\DataType\TicketGroup::class;
         $response_types[400] = \Eventbrite\Model\DataType\Error::class;
         $response = $this->request('POST', "/organizations/{$organization_id}/ticket_groups/", $query);
-        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromRequest'], [$response->getBody(), '', '']);
+        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromResponse'], [$response->getJson(), '', '']);
     }
     
     /**
@@ -60,7 +60,7 @@ class TicketGroups extends \Eventbrite\Model\ResourceBase
         $response_types = [];
         $response_types[200] = \Eventbrite\Model\DataType\TicketGroup::class;
         $response = $this->request('POST', "/ticket_groups/{$ticket_group_id}/", $query);
-        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromRequest'], [$response->getBody(), '', '']);
+        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromResponse'], [$response->getJson(), '', '']);
     }
     
     /**
@@ -84,7 +84,7 @@ class TicketGroups extends \Eventbrite\Model\ResourceBase
         $response_types = [];
         $response_types[204] = \Eventbrite\Model\ModelBase::class;
         $response = $this->request('POST', "/organizations/{$organization_id}/events/{$event_id}/ticket_classes/{$ticket_class_id}/ticket_groups/", $query);
-        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromRequest'], [$response->getBody(), '', '']);
+        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromResponse'], [$response->getJson(), '', '']);
     }
     
     /**
@@ -101,7 +101,7 @@ class TicketGroups extends \Eventbrite\Model\ResourceBase
         $response_types = [];
         $response_types[200] = \Eventbrite\Model\ModelBase::class;
         $response = $this->request('GET', "/organizations/{$organization_id}/ticket_groups/", $query);
-        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromRequest'], [$response->getBody(), '', '']);
+        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromResponse'], [$response->getJson(), '', '']);
     }
     
     /**
@@ -118,7 +118,7 @@ class TicketGroups extends \Eventbrite\Model\ResourceBase
         $response_types = [];
         $response_types[200] = \Eventbrite\Model\ModelBase::class;
         $response = $this->request('DELETE', "/ticket_groups/{$ticket_group_id}/", $query);
-        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromRequest'], [$response->getBody(), '', '']);
+        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromResponse'], [$response->getJson(), '', '']);
     }
     
 }

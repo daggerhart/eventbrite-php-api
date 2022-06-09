@@ -4,25 +4,8 @@ namespace Eventbrite\Model;
 
 /**
  * Api client response handler.
- *
- * ResponseInterface
- * @method getStatusCode()
- * @method withStatus($code, $reasonPhrase = '')
- * @method getReasonPhrase()
- *
- * MessageInterface
- * @method getProtocolVersion()
- * @method withProtocolVersion($version)
- * @method getHeaders()
- * @method hasHeader($name)
- * @method getHeader($name)
- * @method getHeaderLine($name)
- * @method withHeader($name, $value)
- * @method withAddedHeader($name, $value)
- * @method withoutHeader($name)
- * @method withBody(\Psr\Http\Message\StreamInterface $body)
  */
-class ApiClientResponse implements \Psr\Http\Message\ResponseInterface
+class ApiClientResponse extends \GuzzleHttp\Psr7\Response
 {
     /**
      * @var \Psr\Http\Message\ResponseInterface
@@ -30,27 +13,17 @@ class ApiClientResponse implements \Psr\Http\Message\ResponseInterface
     protected \Psr\Http\Message\ResponseInterface $inner;
 
     /**
-     * @param \Psr\Http\Message\ResponseInterface $response
+     * {@inheritdoc}
      */
-    public function __construct(\Psr\Http\Message\ResponseInterface $response) {
-        $this->inner = $response;
-    }
-    
-    /**
-     * @param string $method
-     * @param array $args
-     *
-     * @return mixed
-     */
-    public function __call(string $method, array $args) {
-        return call_user_func_array([$this->inner, $method], $args);
+    public function __construct(int $status = 200, array $headers = [], $body = NULL, string $version = '1.1', string $reason = NULL) {
+        parent::__construct($status, $headers, $body, $version, $reason);
     }
     
     /**
      * @return array
      */
-    public function getBody() : array {
-        return \json_decode($this->inner->getBody(), true);
+    public function getJson() : array {
+        return \json_decode(parent::getBody()->getContents(), true);
     }
     
 }

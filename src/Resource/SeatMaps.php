@@ -21,7 +21,7 @@ class SeatMaps extends \Eventbrite\Model\ResourceBase
         $response_types = [];
         $response_types[200] = \Eventbrite\Model\ModelBase::class;
         $response = $this->request('GET', "/organizations/{$organization_id}/seatmaps/", $query);
-        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromRequest'], [$response->getBody(), '', '']);
+        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromResponse'], [$response->getJson(), '', '']);
     }
     
     /**
@@ -42,7 +42,7 @@ class SeatMaps extends \Eventbrite\Model\ResourceBase
         $response_types[200] = \Eventbrite\Model\DataType\SeatMap::class;
         $response_types[403] = \Eventbrite\Model\DataType\Error::class;
         $response = $this->request('POST', "/events/{$event_id}/seatmaps/", $query);
-        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromRequest'], [$response->getBody(), '', '']);
+        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromResponse'], [$response->getJson(), '', '']);
     }
     
 }

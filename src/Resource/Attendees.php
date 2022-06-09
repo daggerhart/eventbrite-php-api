@@ -23,7 +23,7 @@ class Attendees extends \Eventbrite\Model\ResourceBase
         $response_types = [];
         $response_types[200] = \Eventbrite\Model\DataType\Attendee::class;
         $response = $this->request('GET', "/events/{$event_id}/attendees/{$attendee_id}/", $query);
-        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromRequest'], [$response->getBody(), '', '']);
+        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromResponse'], [$response->getJson(), '', '']);
     }
     
     /**
@@ -40,7 +40,7 @@ class Attendees extends \Eventbrite\Model\ResourceBase
         $response_types = [];
         $response_types[200] = \Eventbrite\Model\Collection\Attendee::class;
         $response = $this->request('GET', "/events/{$event_id}/attendees/", $query);
-        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromRequest'], [$response->getBody(), 'attendees', '\\Eventbrite\\Model\\DataType\\Attendee']);
+        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromResponse'], [$response->getJson(), 'attendees', '\\Eventbrite\\Model\\DataType\\Attendee']);
     }
     
     /**
@@ -57,7 +57,7 @@ class Attendees extends \Eventbrite\Model\ResourceBase
         $response_types = [];
         $response_types[200] = \Eventbrite\Model\Collection\Attendee::class;
         $response = $this->request('GET', "/organizations/{$organization_id}/attendees/", $query);
-        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromRequest'], [$response->getBody(), 'attendees', '\\Eventbrite\\Model\\DataType\\Attendee']);
+        return call_user_func_array([$response_types[$response->getStatusCode()], 'createFromResponse'], [$response->getJson(), 'attendees', '\\Eventbrite\\Model\\DataType\\Attendee']);
     }
     
 }
