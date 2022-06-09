@@ -7,9 +7,9 @@
     },
     "require": {
         "ext-json": "*",
-        "guzzlehttp/guzzle": "^7",
-        "ramsey/collection": "^1.2",
-        "myclabs/php-enum": "^1.8"
+        "guzzlehttp/guzzle": "^6.5 || ^7.4",
+        "myclabs/php-enum": "^1.8",
+        "ramsey/collection": "^1.2"
     },
     "scripts": {
         "tests": "phpunit tests"
